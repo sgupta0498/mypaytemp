@@ -1,0 +1,75 @@
+<ion-view view-title="Account Statement">
+    <ion-pane>
+        <ion-tabs class="tabs-striped tabs-top ">
+
+            <!-- Tab 1 -->
+      <ion-tab title="last 1 weak" class="tab-item "  href="">
+        <ion-nav-view name="tab-tab1">
+        <ion-content>
+          <div class="row header">
+             <div class="col"></div>
+            <div class="col">Date</div>
+            <div class="col">Description</div>
+            <div class="col">amount</div>
+          </div>
+          <div class="row" ng-repeat="data in ctrl.data">
+            <div class="col"></div>
+            <div class="col">{{data.code}}</div>
+            <div class="col">LK {{data.limit}}</div>
+            <div class="col">{{data.account}}</div>
+          </div>
+          </ion-content>
+          </ion-nav-view>
+        </ion-tab>
+
+
+            <!-- Tab 2 -->
+            <ion-tab title="last 1 month" href="">
+                <ion-nav-view name="tab-tab2">
+                    <ion-content>
+        <div class="row header">
+           <div class="col"></div>
+          <div class="col">Date</div>
+          <div class="col">Description</div>
+          <div class="col">amount</div>
+          
+        </div>
+        <div class="row" ng-repeat="data in ctrl.data">
+         <div class="col"></div>
+          <div class="col">{{data.code}}</div>
+          <div class="col">LK {{data.limit}}</div>
+          <div class="col">{{data.account}}</div>
+        
+        </div>
+    </ion-content>
+                </ion-nav-view>
+            </ion-tab>
+
+
+            <!-- Tab 2 -->
+            <ion-tab title="All" href="">
+                <ion-nav-view name="tab-tab3">
+                    <ion-content>
+        <div class="row header">
+           <div class="col"></div>
+          <div class="col">Date</div>
+          <div class="col">Description</div>
+          <div class="col">amount</div>
+          
+        </div>
+        <div class="row" ng-repeat="data in ctrl.data">
+           <div class="col"></div>
+          <div class="col">{{data.code}}</div>
+          <div class="col">LK {{data.limit}}</div>
+          <div class="col">{{data.account}}</div>
+        
+        </div>
+    </ion-content>
+                </ion-nav-view>
+            </ion-tab>
+
+
+        </ion-tabs>
+
+    </ion-pane>
+</ion-view>

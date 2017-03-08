@@ -1,0 +1,119 @@
+<ion-view view-title="Account Verification">
+    <ion-pane>
+        <ion-tabs class="tabs-striped tabs-top ">
+            <!-- Tab 1 -->
+      <ion-tab title="Id Card (PAN)" class="tab-item "  href="">
+       
+        <ion-nav-view name="tab-tab1">
+        <ion-content>
+           <div class="list">
+    
+    <div class="col col-center text-center" style="padding-left: 30%;padding-right: 30%;">
+      <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="Name as per PAN Card">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="PAN Card Number">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input ng-click="openDatePicker()" ng-model="selectedDate1" type="text" placeholder="Birthdate"> 
+        </label>
+        
+        </div>
+        <div class="list list-inset" >
+       
+        <label class="item item-input item-select">
+        <div class="input-label" style="margin-left: 0;">
+         Select Gender
+        </div>
+        <select>
+         
+          <option selected>Male</option>
+          <option>Female</option>
+           <option>Others</option>
+        </select>
+      </label>
+        </div>
+      <div class="col col-center text-center">
+      <button class="button button-positive button-small">
+        Submit
+      </button>
+    </div>
+    <div class="col col-center text-center">
+      or
+    </div>
+    <div class="col col-center text-center">
+      send to : <a href="">id@zebpay.com</a>
+    </div>
+    </div>
+    
+    
+    </div>
+          </ion-content>
+          </ion-nav-view>
+        </ion-tab>
+            <!-- Tab 2 -->
+    <ion-tab title="Bank Details" href="">
+        <ion-nav-view name="tab-tab2">
+            <ion-content>
+       <div class="list">
+    
+    <div class="col col-center text-center" style="padding-left: 30%;padding-right: 30%;">
+      <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="IFSC Code">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="Bank Name">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="Branch Name">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="Account Holder Name">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="Account Number">
+        </label>
+        </div>
+        <div class="list list-inset" >
+        <label class="item item-input">
+          <input  type="text" placeholder="Confirm Account Number">
+        </label>
+        </div>
+      <div class="col col-center text-center">
+      <button class="button button-positive button-small">
+        Submit
+      </button>
+    </div>
+    <div class="col col-center text-center">
+      or
+    </div>
+    <div class="col col-center text-center">
+      send to : <a href="">id@zebpay.com</a>
+    </div>
+    </div>
+    
+    
+    </div>
+         
+    </ion-content>
+      </ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+
+    </ion-pane>
+</ion-view>
