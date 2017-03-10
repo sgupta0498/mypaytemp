@@ -1,17 +1,24 @@
 <ion-view view-title="Transactions">
 <ion-floating-menu>
-    <ion-floating-item icon="ion-arrow-right-a" text="send/recievebitcoins" click="myEvent()"></ion-floating-item>
-    <ion-floating-item icon="ion-iphone" text="mobile recharge" click="myEvent()"></ion-floating-item>
-	<ion-floating-item icon="ion-ios-cart" text="buy vouchers" click="myEvent()"></ion-floating-item>
-    <ion-floating-item icon="ion-android-sync" text="trade bitcoins" click="myEvent()"></ion-floating-item>
-    <ion-floating-item icon="ion-bag" text="buy/ sell bitcoins" click="myEvent()"></ion-floating-item>
+    <ion-floating-item icon="ion-arrow-right-a" text="send/recievebitcoins" click="openSendAndReceiveBitCoins()"></ion-floating-item>
+    <ion-floating-item icon="ion-iphone" text="mobile recharge" click="openMoobileRecharge()"></ion-floating-item>
+	<ion-floating-item icon="ion-ios-cart" text="buy vouchers" click="openBuyVouchers()"></ion-floating-item>
+    <ion-floating-item icon="ion-android-sync" text="trade bitcoins" click="openTradeBitCoins()"></ion-floating-item>
+    <ion-floating-item icon="ion-bag" text="buy/ sell bitcoins" click="openBuyAndSellBitcoins()"></ion-floating-item>
     <ion-floating-item icon="ion-card" text="account" click="openAccount()"></ion-floating-item>
 </ion-floating-menu>
   <ion-content>
-    <ion-list>
-      
-      
-	  
-    </ion-list>
+    <div class="col " >
+        
+    <div class="card">
+      <div class="item item-text-wrap">
+        <a class="item item-avatar" href="#">
+        <img src="http://www.startupleadership.com/person_img/Zebpay-Logo.jpg" alt="ad">
+        <h2>Zebpay</h2>  <p style="float: right;">1 week ago</p>
+        <p >1 b recieved</p>
+        </a>
+      </div>
+    </div>
+    </div>
   </ion-content>
 </ion-view>

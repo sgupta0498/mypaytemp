@@ -153,7 +153,7 @@ angular.module('starter', ['ionic', 'ionic.cloud','starter.controllers','ionic-d
         }
       }
     })
-.state('app.accountdetails', {
+    .state('app.accountdetails', {
       url: '/accountdetails',
       views: {
         'menuContent': {
@@ -162,7 +162,51 @@ angular.module('starter', ['ionic', 'ionic.cloud','starter.controllers','ionic-d
         }
       }
     })
-
+.state('app.buyandsellbitcoins', {
+      url: '/buyandsellbitcoins',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/buyAndSellCoins.html',
+          controller: 'BuyAndSellCtrl'                
+        }
+      }
+    })
+.state('app.tradebitcoins', {
+      url: '/tradebitcoins',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/tradebitcoins.html',
+          controller: 'TradeBitCoinCtrl'                
+        }
+      }
+    })
+.state('app.buyvouchers', {
+      url: '/buyvouchers',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/buyVouchers.html',
+          controller: 'TradeBitCoinCtrl'                
+        }
+      }
+    })
+.state('app.sendrecievebitcoins', {
+      url: '/sendrecievebitcoins',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/sendrecievebitcoins.html',
+          controller: 'TradeBitCoinCtrl'                
+        }
+      }
+    })
+.state('app.mobilerecharge', {
+      url: '/mobilerecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/mobilerecharge.html',
+          controller: 'TradeBitCoinCtrl'                
+        }
+      }
+    })
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -175,7 +219,7 @@ angular.module('starter', ['ionic', 'ionic.cloud','starter.controllers','ionic-d
 
   // if none of the above states are matched, use this as the fallback
 
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/homepage');
 })
 .config(function (ionicDatePickerProvider) {
     var datePickerObj = {
