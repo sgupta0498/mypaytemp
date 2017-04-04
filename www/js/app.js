@@ -4,6 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
+<<<<<<< HEAD
 angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controllers','ionic-datepicker','zingchart-angularjs', 
   'ion-floating-menu','ion-digit-keyboard','chart.js'])
  
@@ -25,6 +26,9 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       }
     });
   })
+=======
+angular.module('starter', ['ionic', 'ionic.cloud','starter.controllers','ionic-datepicker','zingchart-angularjs', 'ion-floating-menu'])
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 
 .config(function($ionicCloudProvider) {
   $ionicCloudProvider.init({
@@ -33,6 +37,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
     }
   });
 })
+<<<<<<< HEAD
 .directive('tabsSwipable', ['$ionicGesture', function($ionicGesture) {
     return {
       restrict: 'A',
@@ -60,6 +65,8 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       }
     };
   }])
+=======
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -86,7 +93,36 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
     controller: 'AppCtrl'
   })
 
+<<<<<<< HEAD
   
+=======
+  .state('app.search', {
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html'
+      }
+    }
+  })
+
+  .state('app.browse', {
+      url: '/browse',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/browse.html'
+        }
+      }
+    })
+    .state('app.playlists', {
+      url: '/playlists',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/playlists.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 
 .state('app.userprofile', {
       url: '/userprofile',
@@ -107,6 +143,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
         }
       }
 })
+<<<<<<< HEAD
 .state('app.settingspinchange', {
       url: '/settingspinchange',
       views: {
@@ -116,6 +153,8 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
         }
       }
 })
+=======
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 .state('app.support', {
       url: '/support',
       views: {
@@ -145,8 +184,12 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       url: '/accountstatements',
       views: {
         'menuContent': {
+<<<<<<< HEAD
          templateUrl: 'templates/accountstatements.html',
           controller: 'AccountStatementCtrl'                   
+=======
+         templateUrl: 'templates/accountstatements.html'       
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
         }
       }
     })
@@ -154,8 +197,12 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       url: '/mybitcoinaddress',
       views: {
         'menuContent': {
+<<<<<<< HEAD
          templateUrl: 'templates/myBitCoinAddress.html',
           controller: 'MyBitCoinAddressCtrl'                  
+=======
+         templateUrl: 'templates/myBitCoinAddress.html'       
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
         }
       }
     })
@@ -235,6 +282,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       url: '/mobilerecharge',
       views: {
         'menuContent': {
+<<<<<<< HEAD
          templateUrl: 'templates/buttonmenu/mobilerecharge.html'
                       
         }
@@ -252,11 +300,30 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 
 
   ;
+=======
+         templateUrl: 'templates/buttonmenu/mobilerecharge.html',
+          controller: 'TradeBitCoinCtrl'                
+        }
+      }
+    })
+  .state('app.single', {
+    url: '/playlists/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/playlist.html',
+        controller: 'PlaylistCtrl'
+      }
+    }
+  });
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 
   // if none of the above states are matched, use this as the fallback
 
   $urlRouterProvider.otherwise('/app/homepage');
+<<<<<<< HEAD
     //$urlRouterProvider.otherwise({redirectTo: "/app/mobilerecharge"})
+=======
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 })
 .config(function (ionicDatePickerProvider) {
     var datePickerObj = {

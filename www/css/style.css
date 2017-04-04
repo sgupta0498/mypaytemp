@@ -3,10 +3,13 @@
     background-color: #FFFFFF;
     height: 170px;
 }
+<<<<<<< HEAD
 .barcolortest {
   background-color: rgb(42, 201, 170); 
   
 }
+=======
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 
 .bar .profile {
     top: 0;
@@ -154,7 +157,11 @@ ul.img-list li:hover span.text-content {
 /*.icon-circle i, .icon-circle-small i, .icon-circle-large i { vertical-align: middle; }*/
 
 .icon-circle-outline {
+<<<<<<< HEAD
    border: 1px solid #33cd5f !important;
+=======
+   border: 1px solid rgb(0, 161, 225);
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
    background: transparent;
   color: rgb(0, 161, 225);
    /*color: #8a6de9;*/
@@ -220,6 +227,7 @@ ul.img-list li:hover span.text-content {
 }
 
 
+<<<<<<< HEAD
 /*setting pin change ......*/
 ion-pane#login-2 {
             background: #333;
@@ -278,3 +286,8 @@ ion-pane#login-2 {
         ion-pane#login-2 #pin div i.ion-record {
             margin: 0;
         }
+=======
+
+
+
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871

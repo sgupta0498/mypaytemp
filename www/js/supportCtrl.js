@@ -48,6 +48,14 @@ myPay.controller('SupportCtrl', function($scope, $ionicModal) {
     $scope.closeModalRateApp = function() {
         $scope.modalrateApp.hide();
     };
+<<<<<<< HEAD
+=======
+    
+
+
+
+
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 
     $ionicModal.fromTemplateUrl('templates/knowledteBaseModal.html', {
         scope: $scope,

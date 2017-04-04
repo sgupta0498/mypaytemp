@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 myPay.controller('AccountVerificationCtrl', function($scope,ionicDatePicker, $cordovaCamera) {
+=======
+myPay.controller('AccountVerificationCtrl', function($scope,ionicDatePicker) {
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
   //alert("asdasfd")
 
 
@@ -21,6 +25,7 @@ myPay.controller('AccountVerificationCtrl', function($scope,ionicDatePicker, $co
       //alert("asdf")
       ionicDatePicker.openDatePicker(ipObj1);
     };
+<<<<<<< HEAD
 
 
 
@@ -88,6 +93,8 @@ myPay.controller('AccountVerificationCtrl', function($scope,ionicDatePicker, $co
 
 
 
+=======
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
 });
 
 

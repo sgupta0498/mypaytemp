@@ -59,6 +59,7 @@ $scope.test = function() {
     $state.go('app.userprofile');
     
   };
+<<<<<<< HEAD
   
 $scope.openMyAddress = function() {
    //alert("hii");
@@ -101,6 +102,8 @@ $scope.openVerificationPage = function() {
     $state.go('app.aboutus');
     
   };
+=======
+>>>>>>> e5b91b45e2fc8b44707db5dbd239e90420c16871
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
