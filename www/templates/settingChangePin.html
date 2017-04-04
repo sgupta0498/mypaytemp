@@ -1,0 +1,21 @@
+<ion-view view-title="Change Pin">
+      <ion-pane id="login-2">
+        <ion-content>
+            <p id="pin-title">Enter pin code :</p>
+            <div id="pin">
+                
+                <div><i class="icon ion-record" ng-show="pinDotVisible[&apos;1&apos;]"></i></div>
+                <div><i class="icon ion-record" ng-show="pinDotVisible[&apos;2&apos;]"></i></div>
+                <div><i class="icon ion-record" ng-show="pinDotVisible[&apos;3&apos;]"></i></div>
+                <div><i class="icon ion-record" ng-show="pinDotVisible[&apos;4&apos;]"></i></div>
+                <div style="border-bottom: 0px;"><i class="icon ion-backspace" ng-show="canErase" ng-click="doErase()" ></i> </div>
+                
+            </div>
+            <div id="status" style="margin-top: 15px; font-size: 18px;">
+                <p style="color: #2ecc71;" ng-show="success === true">Success !</p>
+                <p style="color: #e74c3c;" ng-show="success === false">Failed.</p>
+            </div>
+        </ion-content>
+        <ion-digit-keyboard settings="keyboardSettings" ></ion-digit-keyboard>
+    </ion-pane>
+    </ion-view>

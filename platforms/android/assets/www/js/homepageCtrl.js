@@ -1,0 +1,21 @@
+myPay.controller('HomePageCtrl', function($scope,$state) {
+  //alert("asdfasf")
+  $scope.openAccount=function(){
+  	  $state.go('app.accountdetails');
+  }
+  $scope.openBuyAndSellBitcoins=function(){
+  	  $state.go('app.buyandsellbitcoins');
+  }
+  $scope.openTradeBitCoins=function(){
+  	  $state.go('app.tradebitcoins');
+  }
+  $scope.openBuyVouchers=function(){
+      $state.go('app.buyvouchers');
+  }
+  $scope.openMoobileRecharge=function(){
+      $state.go('app.mobilerecharge');
+  }
+  $scope.openSendAndReceiveBitCoins=function(){
+      $state.go('app.sendrecievebitcoins');
+  }
+});
