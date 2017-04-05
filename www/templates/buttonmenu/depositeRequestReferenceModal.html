@@ -1,0 +1,31 @@
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">ENter payment reference no.</h1>
+          <button class="button button-clear button-primary" ng-click="closeModalDepositeRequestReference()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+           <div class="card">
+             <label class="item item-input">
+               <textarea class="textareas" id="postMessageInput" ng-model="$parent.post.message" placeholder="Payment reference No."  autofocus ></textarea>
+            </label>
+          </div>
+             <label class="item item-input">
+               <Rh1>For RTGS</h1> take photo or enter <br> UTR number from bank statement <br> Example : SBINR9208788878787
+            </label>
+                   
+             <label class="item item-input">
+               <Rh1>For Neft</h1> take photo or enter <br> UTR number from bank statement <br> Example : KKBKH3233424323
+            </label>
+          
+             <label class="item item-input">
+               <Rh1>For IMPS</h1> take photo or enter <br> UTR number from bank statement <br> Example : IMPS-P2A-4565455555
+            </label>
+            <div class="col col-center text-center ">
+            <button class="button button-positive button-small" ng-click="openModalReferenceRequest()" >Ok</button>
+            
+            <button class="button button-positive button-small" ng-click="closeModalDepositeRequestReference()" >cancel</button>
+             </div> 
+          </div>
+        </ion-content>
+      </ion-modal-view>
