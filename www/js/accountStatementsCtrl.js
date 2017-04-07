@@ -26,7 +26,8 @@ myPay.controller('AccountStatementCtrl', function($scope) {
     	"desc": "ZebPay Welcome",
     	"amount": "1b"
     }];
-     $scope.dataAll=[{
+
+    $scope.dataAll=[{
     	"date":"28 mar 17",
     	"desc": "Recharge Vodafone",
     	"amount": "200 Rs."

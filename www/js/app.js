@@ -137,7 +137,8 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       url: '/freebitcoins',
       views: {
         'menuContent': {
-         templateUrl: 'templates/freebitcoins.html'       
+         templateUrl: 'templates/freebitcoins.html',
+         controller: 'FreeBitCoinCtrl'       
         }
       }
     })

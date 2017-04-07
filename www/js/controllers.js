@@ -54,7 +54,12 @@ myPay.controller('AppCtrl', function($scope, $ionicModal, $timeout,$state) {
   $scope.login = function() {
     $scope.modal.show();
   };
-$scope.test = function() {
+  $scope.userProfileDetails={
+    "userName":"Arjun",
+    "mobileNumber":"8988965645",
+    "userProfileImageUrl":"img/mcfly.jpg"
+  }
+  $scope.showUserProfile = function() {
    //alert("hii");
     $state.go('app.userprofile');
     

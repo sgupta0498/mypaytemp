@@ -5,12 +5,12 @@
     <div class="col col-center text-center" style="padding-left: 10%;padding-right: 10%;">
       <div class="list list-inset" >
         <label class="item item-input">
-          <input  type="text" placeholder="Enter promo code">
+          <input  type="text" ng-model="promodetails.promocode" placeholder="Enter promo code">
         </label>
         </div>
     </div>
     <div class="col col-center text-center">
-      <button class="button button-positive button-small">
+      <button  class="button button-positive button-small" ng-click="veryPromocode()">
         Verify
       </button>
     </div>
@@ -34,7 +34,7 @@
 
 </div>
 <div class="col col-center text-center" style="background-color: #33cd5f;">
-      <button class="button button-positive button-small">
+      <button class="button button-positive button-small" ng-click="sharePromocode()">
         Share
       </button>
 </div>
