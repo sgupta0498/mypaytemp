@@ -1,32 +1,36 @@
-<ion-view view-title="Rs Deposit Invoice">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">ENter payment reference no.</h1>
+          <button class="button button-clear button-primary" ng-click="closeModalDepositeRequestInvoice()">Cancel</button>
+        </ion-header-bar>
   <ion-content>
 
   <div class="list card">
 
   <a href="" class="item item-icon-left">
     <i class="icon ion-home"></i>
-    Arjun Mishra<br>919867868776
+    {{invoiceDeposite.name}}<br>{{invoiceDeposite.mobileNumber}}
   </a>
   </div>
 <div class="list">
    <label class="item item-input item-stacked-label">
    <span class="input-label">Bank Name </span>
-   <input type="text" placeholder="Bank of India">
+   <input type="text" ng-model="invoiceDeposite.bankName" placeholder="Enter Bank Name">
    </label>
 
    <label class="item item-input item-stacked-label">
    <span class="input-label">Account Holder Name</span>
-   <input type="text" placeholder="Zeb It Service Private Limited">
+   <input type="text" ng-model="invoiceDeposite.accountHolderName" placeholder="Enter Account Holder Name">
    </label>
 
    <label class="item item-input item-stacked-label">
    <span class="input-label">Account Number</span>
-   <input type="text" placeholder="06876876887444">
+   <input type="text" ng-model="invoiceDeposite.accountNumber" placeholder="Enter Account Number">
    </label>
 
    <label class="item item-input item-stacked-label">
    <span class="input-label">IFSC Code</span>
-   <input type="text" placeholder="ICICI0099999">
+   <input type="text" ng-model="invoiceDeposite.ifscCode" placeholder="Enter IFSC Code">
    </label>
 </div>
    <div class="list">
@@ -34,13 +38,13 @@
     
     <div class="col col-center text-center">
       
-      <button class="button button-positive button-small" ng-click="openModalDepositeRequest()">
+      <button class="button button-positive button-small" ng-click="invoiceDetailsShare()">
         Share 
       </button>
-      <button class="button button-positive button-small" ng-click="openModalDepositeRequest()">
+      <button class="button button-positive button-small" ng-click="invoiceDetailsCopy()">
         Copy
       </button>
-      <button class="button button-positive button-small" ng-click="openModalDepositeRequest()">
+      <button class="button button-positive button-small" ng-click="closeModalDepositeRequestInvoice()">
         Close
       </button>
     </div>
@@ -49,4 +53,5 @@
 
 
   </ion-content>
-</ion-view>
+      </ion-modal-view>
+

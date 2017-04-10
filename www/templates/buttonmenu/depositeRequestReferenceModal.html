@@ -7,7 +7,7 @@
           <div class="list">
            <div class="card">
              <label class="item item-input">
-               <textarea class="textareas" id="postMessageInput" ng-model="$parent.post.message" placeholder="Payment reference No."  autofocus ></textarea>
+               <textarea class="textareas" id="postMessageInput" ng-model="depositeRequestReference.number" placeholder="Payment reference No."  autofocus ></textarea>
             </label>
           </div>
              <label class="item item-input">
@@ -22,7 +22,7 @@
                <Rh1>For IMPS</h1> take photo or enter <br> UTR number from bank statement <br> Example : IMPS-P2A-4565455555
             </label>
             <div class="col col-center text-center ">
-            <button class="button button-positive button-small" ng-click="openModalReferenceRequest()" >Ok</button>
+            <button class="button button-positive button-small" ng-click="paymentReferenceOk()" >Ok</button>
             
             <button class="button button-positive button-small" ng-click="closeModalDepositeRequestReference()" >cancel</button>
              </div> 

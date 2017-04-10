@@ -15,7 +15,7 @@
   <ion-side-menu side="right"><!--    -->
     <ion-header-bar class="bar-profile"  menu-close  ng-click="showUserProfile()">
       <div class="profile"  >
-          <img class="profile-picture" src="{{userProfileDetails.userProfileImageUrl}}" />
+          <img class="profile-picture" ng-src="{{userProfileDetails.userProfileImageUrl}}" />
           <h5 class="name">{{userProfileDetails.userName}}</h5><i class="icon ion-edit" style="text-align: right;float: right;" ></i>
           <h10 class="name">{{userProfileDetails.mobileNumber}}</h10>
       </div>

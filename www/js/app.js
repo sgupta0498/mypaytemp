@@ -16,7 +16,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 
         // Don't remove this line unless you know what you are doing. It stops the viewport
         // from snapping when text inputs are focused. Ionic handles this internally for
-        // a much nicer keyboard experience.
+        // a much nicer keyboard evoxperience.
         cordova.plugins.Keyboard.disableScroll(true);
       }
       if (window.StatusBar) {
@@ -219,7 +219,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/buyVouchers.html',
-          controller: 'TradeBitCoinCtrl'                
+          controller: 'BuyVouchersCtrl'                
         }
       }
     })
@@ -228,7 +228,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/sendrecievebitcoins.html',
-          controller: 'TradeBitCoinCtrl'                
+          controller: 'SendRecieveCoinCtrl'                
         }
       }
     })
@@ -273,7 +273,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/depositeRequestInvoice.html',
-          controller: 'AccountDetailsWithdrawCtrl'                
+          controller: 'AccountDetailsDepositRequestDetailsCtrl'                
         }
       }
     })

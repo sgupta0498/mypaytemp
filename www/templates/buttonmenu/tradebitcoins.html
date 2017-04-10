@@ -38,21 +38,21 @@
     <div class="col col-center text-center" style="padding-left: 5%;padding-right: 5%;">
       <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="rate">
+            <input  type="text" ng-model="buyBid.rate" placeholder="rate">
           </label>
         </div>
         <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="amount">
+            <input  type="text"  ng-model="buyBid.amount" placeholder="amount">
           </label>
         </div>
         <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="quantity">
+            <input  type="text"  ng-model="buyBid.quantity" placeholder="quantity">
           </label>
         </div>
       <div class="col col-center text-center">
-        <button class="button button-small icon ion-android-sync  icon-right  button-calm" > Confirm Bid</button>
+        <button class="button button-small icon ion-android-sync  icon-right  button-calm" ng-click="confirmBid()"> Confirm Bid</button>
       </div>
       <div class="row" >
         <div class="col col-center text-center">
@@ -109,21 +109,21 @@
     <div class="col col-center text-center" style="padding-left: 5%;padding-right: 5%;">
       <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="rate">
+            <input  type="text"  ng-model="sellBid.rate"     placeholder="rate">
           </label>
         </div>
         <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="amount">
+            <input  type="text" ng-model="sellBid.amount" placeholder="amount">
           </label>
         </div>
         <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="quantity">
+            <input  type="text" ng-model="sellBid.quantity" placeholder="quantity">
           </label>
         </div>
       <div class="col col-center text-center">
-        <button class="button button-small icon ion-android-sync  icon-right  button-calm" > Confirm ask</button>
+        <button class="button button-small icon ion-android-sync  icon-right  button-calm" ng-click="confirmSell()"> Confirm ask</button>
       </div>
       <div class="row" >
         <div class="col col-center text-center">
