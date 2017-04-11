@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controllers','ionic-datepicker','zingchart-angularjs', 
-  'ion-floating-menu','ion-digit-keyboard','chart.js'])
+  'ion-floating-menu','ion-digit-keyboard','chart.js','mypayservice'])
  
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -79,6 +79,38 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+/*.state('userregistration', {
+      url: '/userregistration',
+      views: {
+        'menuContent': {
+        templateUrl: 'templates/registration.html',
+        controller: 'RegistraionCtrl'
+       
+        }
+      }
+})
+.state('userlogin', {
+      url: '/userlogin',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+       
+        }
+      }
+})*/
+.state('userregistration', {
+    url: '/userregistration',
+   
+    templateUrl: 'templates/registration.html',
+    controller: 'RegistraionCtrl'
+  })
+.state('userlogin', {
+    url: '/userlogin',
+   
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
     .state('app', {
     url: '/app',
     abstract: true,
@@ -87,7 +119,26 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
   })
 
   
-
+/*.state('app.userregistration', {
+      url: '/userregistration',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/registration.html',
+          controller: 'RegistraionCtrl'
+       
+        }
+      }
+})*/
+/*.state('app.userlogin', {
+      url: '/userlogin',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+       
+        }
+      }
+})*/
 .state('app.userprofile', {
       url: '/userprofile',
       views: {

@@ -1,0 +1,67 @@
+
+
+<ion-view view-title="Sign-Up" name="login-view">
+<ion-header-bar align-title="center" class="bar-positive">
+ 
+  <h1 class="title">Sign-Up</h1>
+  
+</ion-header-bar>
+
+  <ion-content class="padding">
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Full Name" ng-model="data.firstName">
+          </label>
+
+          <label class="item item-input">
+              <input type="text" placeholder="Email" ng-model="data.Email">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Confirm Password" ng-model="data.confirmpassword">
+          </label>
+          <label class="item item-input">
+              <input type="text" placeholder="Mobile Number" ng-model="data.mobnileNumber">
+          </label>
+ 
+      </div>
+      <button class="button button-block button-positive" ng-click="login(data)">Register</button>
+      <a href="#/userlogin" class="button button-positive button-clear button-block ">back to login</a>
+      
+  </ion-content>
+</ion-view>
+
+
+
+
+
+<!-- <div class="list">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="First Name">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="Last Name">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="Email">
+  </label>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Password</span>
+    <input type="text" placeholder="Password">
+  </label>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Confirm Password</span>
+    <input type="text" placeholder="Confirm Password">
+  </label>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Mobile No.</span>
+    <input type="text" placeholder="Mobile No.">
+  </label>
+  <button class="button button-block button-positive" ng-click="register(data)">Register</button>
+
+</div> -->
