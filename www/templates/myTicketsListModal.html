@@ -6,11 +6,16 @@
         </ion-header-bar>
         <ion-content >
           <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="myTicket in myTicketsListData" type="item-text-wrap" >
+        <h2>{{myTicket.ticketMessage}}</h2>
+        
+        <p>{{myTicket.addedDate}} </p>
+      </ion-item>
+          <!--   <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
         <h2>Tell me procedure for how to buy BTC.</h2>
         
-        <p>03 March 2017</p>
-      </ion-item>
+        <p>03 March 2017 </p>
+      </ion-item> -->
     </ion-list>
 
         </ion-content>

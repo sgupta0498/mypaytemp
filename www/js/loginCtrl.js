@@ -9,10 +9,11 @@ myPay.controller('LoginCtrl', function($scope,$state,MyPayService,$cordovaDevice
     	"vibratealert":true
 
     }
-    $scope.login = function (data) {
-        alert("test"+angular.toJson(+ $cordovaDevice.getUUID()))
+    $scope.doLogin = function (data) {
+        /*alert("test "+ $cordovaDevice.getUUID());*/
+       // alert("test"+angular.toJson(data));
         //MyPayService.login("  hiiiiiiiii " ) ;
-        /* $state.go('app.homepage');*/
+         $state.go('app.homepage');
     }
     $scope.goToRegister = function () {
          $state.go('userregistration');

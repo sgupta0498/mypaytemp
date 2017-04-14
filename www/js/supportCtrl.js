@@ -1,5 +1,13 @@
 myPay.controller('SupportCtrl', function($scope, $ionicModal) {
 
+$scope.myTicketsListData = [{
+"ticketMessage":"Tell me procedure for how to buy BTC.",
+"addedDate":"04 March 2017 "  
+}];
+ $scope.createTicketRequest = function(ticketDetails) {
+        alert(" hii "+ticketDetails);
+};
+
     $ionicModal.fromTemplateUrl('templates/createTicketModal.html', {
         scope: $scope,
         focusFirstInput: true

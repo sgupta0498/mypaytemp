@@ -5,17 +5,67 @@
   
 </ion-header-bar>
   <ion-content class="padding" >
+<!--   <form novalidate="novalidate" on-valid-submit="doLogin()">
+    <div class="list card">
+      <div class="item item-divider">Enter your info:</div>
+      <label class="item item-input validated">
+        <span class="input-label">eMail</span>
+        <input type="email" ng-model="user.email" required="required" name="email">
+        <i class="icon ion-alert-circled error col col-10"></i>
+      </label>
+      <label class="item item-input validated row">
+        <span class="input-label col col-33">Password</span>
+        <input type="password" ng-model="user.password" name="password" required="required" class="col col-50">
+        <i class="icon ion-alert-circled error col col-10" style="min-width: 16px;"></i>
+      </label>
+    </div>
+    <div class="padding">
+      <button type="submit" class="button icon-right ion-chevron-right button-block button-energized">
+        login 
+      </button>
+    </div>
+    </form> -->
+<!--  <form novalidate="novalidate" on-valid-submit="doLogin()">
+    <div class="list card">
+      <div class="item item-divider">Enter your info:</div>
+      <label class="item item-input validated">
+        <span class="input-label">eMail</span>
+        <input type="email" ng-model="user.email" required="required" name="email">
+        <i class="icon ion-alert-circled error col col-10"></i>
+      </label>
+      <label class="item item-input validated row">
+        <span class="input-label col col-33">Password</span>
+        <input type="password" ng-model="user.password" name="password" required="required" class="col col-50">
+        <i class="icon ion-alert-circled error col col-10" style="min-width: 16px;"></i>
+      </label>
+    </div>
+    <div class="padding">
+      <button type="submit" class="button icon-right ion-chevron-right button-block button-energized">
+        login
+      </button>
+    </div>
+    </form> -->
+    <form novalidate="novalidate" on-valid-submit="doLogin(user)">
       <div class="list list-inset">
-          <label class="item item-input">
-              <input type="text" placeholder="Username" ng-model="data.username">
+          <label class="item item-input validated">
+              <input type="text" ng-model="user.username" name="name" required="required" placeholder="User Name" >
+               <i class="icon ion-alert-circled error " style="min-width: 16px;"></i>
           </label>
-          <label class="item item-input">
-              <input type="password" placeholder="Password" ng-model="data.password">
+          <label class="item item-input validated">
+             <input type="password" ng-model="user.password" name="password" placeholder="Password"  required="required" >
+               <i class="icon ion-alert-circled error " style="min-width: 16px;"></i>
+
           </label>
       </div>
-      <button class="button button-block button-positive" ng-click="login(data)">Login</button>
-      <a href="#/userregistration" class="button button-positive button-clear button-block ">Or create an account</a>
-      
+      <button type="submit" class="button button-block button-positive" >Login</button>
+     </form> 
+      <p class="text-center">
+      <a href="#/userregistration" class="button button-positive button-clear button-block ">Or create an account</a>  </p>
+
+      <p class="text-center">
+                <a href="">Forgot password</a>
+       </p>
+
   </ion-content>
 
 

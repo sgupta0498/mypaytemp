@@ -332,7 +332,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 
   // if none of the above states are matched, use this as the fallback
 
-  $urlRouterProvider.otherwise('/app/homepage');
+  $urlRouterProvider.otherwise('/userlogin');
     //$urlRouterProvider.otherwise({redirectTo: "/app/mobilerecharge"})
 })
 .config(function (ionicDatePickerProvider) {
@@ -355,7 +355,4 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
     };
     ionicDatePickerProvider.configDatePicker(datePickerObj);
   })
-
-
-
 ;
