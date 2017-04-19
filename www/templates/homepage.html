@@ -24,12 +24,12 @@
         <span style="font-size: 2.5em;">{{currentUserBalance}} Bitcoin</span>    
       </div>
         
-    <div class="card" ng-repeat="activity in currentUserActivities">
-      <div class="item item-text-wrap">
-        <a class="item item-avatar" href="#">
-        <img ng-src="{{activity.imageUrl}}" alt="Ravi">
-        <h2>{{activity.activityName}}</h2>  <p style="float: right;">{{activity.activityTime}}</p>
-        <p >{{activity.priceMessage}}</p>
+    <div class="card" ng-repeat="activity in currentUserActivities" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{activity.imageUrl}}" alt="IMG" style="top: 0px;">
+        <h2 >{{activity.activityName}}</h2>  <p style="float: right;font-size: 11px;">{{activity.activityTime}}</p>
+        <p style="font-size: 11px;">{{activity.priceMessage}}</p>
         </a>
       </div>
     </div>

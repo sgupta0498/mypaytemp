@@ -20,6 +20,31 @@ myPay.controller('HomePageCtrl', function($scope,$state) {
     "priceMessage":"1 b recieved",
     "activityTime": "1 week ago",
     "imageUrl":"img/Zebpay-Logo.jpg"
+  },
+  {
+    "activityName":"Vodafone Recharge",
+    "priceMessage":"49 Rs.",
+    "activityTime": "1 day ago",
+    "imageUrl":"img/Vodafone_logo.png"
+  },
+  {
+    "activityName":"Zebpay",
+    "priceMessage":"1 b recieved",
+    "activityTime": "1 week ago",
+    "imageUrl":"img/Zebpay-Logo.jpg"
+  }
+  ,
+  {
+    "activityName":"Vodafone Recharge",
+    "priceMessage":"49 Rs.",
+    "activityTime": "1 day ago",
+    "imageUrl":"img/Vodafone_logo.png"
+  },
+  {
+    "activityName":"Zebpay",
+    "priceMessage":"1 b recieved",
+    "activityTime": "1 week ago",
+    "imageUrl":"img/Zebpay-Logo.jpg"
   }
   ];
   $scope.currentUserBalance=1;
