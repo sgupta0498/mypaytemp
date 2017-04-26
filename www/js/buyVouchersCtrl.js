@@ -1,5 +1,19 @@
-myPay.controller('BuyVouchersCtrl', function($scope) {
+myPay.controller('BuyVouchersCtrl', function($scope,$timeout) {
   //alert("asdasfd")
+
+$scope.doRefresh = function() {
+    
+    console.log('Refreshing!');
+    $timeout( function() {
+      //simulate async response
+      /*$scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);*/
+
+      //Stop the ion-refresher from spinning
+      $scope.$broadcast('scroll.refreshComplete');
+    
+    }, 1000);
+      
+  };
 
  $scope.vourcherData=[{
  	"voucherId":"1",

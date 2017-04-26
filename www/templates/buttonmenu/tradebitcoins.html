@@ -31,11 +31,10 @@
       </div>
       <div class="row" >
         <div class="col col-center text-center">
-        <button class="button button-small icon ion-android-sync  icon-right  button-calm" > Place Bid</button>
-         
+        <button class="button button-small icon ion-android-sync  icon-right  button-calm" ng-click="showPlaceBid()" > Place Bid</button>
         </div>
       </div>
-    <div class="col col-center text-center" style="padding-left: 5%;padding-right: 5%;">
+    <div class="col col-center text-center" ng-show="showPlaceBidForm" style="padding-left: 5%;padding-right: 5%;">
       <div class="list list-inset" >
           <label class="item item-input">
             <input  type="text" ng-model="buyBid.rate" placeholder="rate">
@@ -54,21 +53,35 @@
       <div class="col col-center text-center">
         <button class="button button-small icon ion-android-sync  icon-right  button-calm" ng-click="confirmBid()"> Confirm Bid</button>
       </div>
-      <div class="row" >
+      
+    
+
+    </div>
+
+    <div class="row" >
         <div class="col col-center text-center">
           pending orders
         </div>
       </div>
       <div class="row" >
-       
         <div class="col col-center text-center">
           bid: 0 Rs. | ask: 0.0000000 Bit Coins
         </div>
       </div>
+  <ion-refresher on-refresh="doRefreshBid()">
+  </ion-refresher>
+  <div class="card" ng-repeat="activity in currentUserBiddingDetails" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{activity.imageUrl}}" alt="IMG" style="top: 1px;">
+        <p style="float: right;font-size: 11px;">{{activity.totalPrice}} Rs.</p>
     
+        <p style="font-size: 14px;">Bid rate: {{activity.askRate}} Rs.</p>
+        <p style="float: right;font-size: 11px;">{{activity.activityTime}}</p>
+        <p style="font-size: 11px;">Quantity: {{activity.quantity}} B</p>
+        </a>
+      </div>
     </div>
-    
-    
     </div>
           </ion-content>
           </ion-nav-view>
@@ -103,10 +116,10 @@
       </div>
       <div class="row" >
         <div class="col col-center text-center">
-        <button class="button button-small icon ion-android-sync  icon-right  button-calm" > Place ask</button>
+        <button class="button button-small icon ion-android-sync  icon-right  button-calm" ng-click="showAskSell()" > Place ask</button>
         </div>
       </div>
-    <div class="col col-center text-center" style="padding-left: 5%;padding-right: 5%;">
+    <div class="col col-center text-center" ng-show="showPlaceAskSellForm"  style="padding-left: 5%;padding-right: 5%;">
       <div class="list list-inset" >
           <label class="item item-input">
             <input  type="text"  ng-model="sellBid.rate"     placeholder="rate">
@@ -125,7 +138,9 @@
       <div class="col col-center text-center">
         <button class="button button-small icon ion-android-sync  icon-right  button-calm" ng-click="confirmSell()"> Confirm ask</button>
       </div>
-      <div class="row" >
+      
+    </div>
+    <div class="row" >
         <div class="col col-center text-center">
           pending orders
         </div>
@@ -136,9 +151,20 @@
           bid: 0 Rs. | ask: 0.0000000 Bit Coins
         </div>
       </div>
+        <ion-refresher on-refresh="doRefreshAsk()">
+  </ion-refresher>
+      <div class="card" ng-repeat="activity in currentUserAskdingDetails" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{activity.imageUrl}}" alt="IMG" style="top: 1px;">
+        <p style="float: right;font-size: 11px;">{{activity.totalPrice}} Rs.</p>
     
+        <p style="font-size: 14px;">Ask rate: {{activity.askRate}} Rs.</p>
+        <p style="float: right;font-size: 11px;">{{activity.activityTime}}</p>
+        <p style="font-size: 11px;">Quantity: {{activity.quantity}} B</p>
+        </a>
+      </div>
     </div>
-    
     
     </div>
     

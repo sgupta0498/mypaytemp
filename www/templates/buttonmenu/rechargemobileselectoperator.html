@@ -1,0 +1,33 @@
+<ion-view view-title="Select Operator">
+ <ion-content >
+	    <div class="col col-center text-center" ng-click="redirectToRechargeMobile()" >
+		    <a class="icon-circle icon-circle-outline icon-circle-large" style="color: #33cd5f !important">
+	          <i class="ion-iphone"></i>
+	        </a>
+	        	<br>
+	       Mobile
+	       <br>
+	       </div>
+
+        <div class="col col-center text-center" style="">
+            +91-8802919545
+      </div>
+      <div class="item item-divider">Select Mobile Operator</div>
+        <ion-radio ng-repeat="item in serverSideList"
+                   ng-value="item.value"
+                   ng-model="data.serverSide"
+                   ng-change="serverSideChange(item)"
+                   name="server-side">
+          {{ item.text }}
+        </ion-radio>
+	    <div class="item item-divider">Select Mobile Operator</div>
+         
+
+
+ </ion-content>
+<div class="bar bar-footer bar-positive footer-button ">
+        <a class="button button-full button-clear button-icon icon icon-right ion-chevron-right text-center" href="#/app/rechargemobileenteramount" style="margin-top: 0px;">
+           Next
+        </a>
+  </div>
+</ion-view>

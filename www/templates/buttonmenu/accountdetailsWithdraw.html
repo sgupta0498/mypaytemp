@@ -6,9 +6,9 @@
         <h5 >Pending {{currentuserpendingbalance}} Rs.</h5>
       </div>
     </div>
-   <div class="list">
+   <div class="list" style="padding-left: 5%;padding-right: 5%;">
     
-    <div class="col col-center text-center" style="padding-left: 10%;padding-right: 10%;">
+    <div class="col col-center text-center" >
       <div class="list list-inset" >
         <label class="item item-input">
           <input  type="text" placeholder="Enter Amount" ng-model="withdraw.amount">
@@ -18,7 +18,7 @@
     <div class="col col-center text-center">
       <h5 >10 Rs will be charged on every withdraw transaction</h5>
       <h5 >Pay to bank account xxxx9877</h5>
-      <button class="button button-positive button-small" ng-click="doWithdraw()">
+      <button class="button button-block button-positive" ng-click="doWithdraw()">
         withdraw
       </button>
     </div>

@@ -149,6 +149,10 @@ ul.img-list li:hover span.text-content {
   height: 24px;
   font-size: 14px;
 }
+.icon-circle-small-mobile {
+  height: 24px;
+  font-size: 14px;
+}
 
 
 /*.icon-circle i, .icon-circle-small i, .icon-circle-large i { vertical-align: middle; }*/
@@ -357,3 +361,61 @@ form .has-success {
   max-width: 10%; 
 
 }
+
+
+
+
+
+
+/* Radio Button Styles here */
+.item-icon-left .item-content {
+  padding-left:3em !important;  
+  padding-top:5px !important;
+  padding-bottom:5px !important;
+  background-color: white !important;  
+}
+
+.item-icon-left i {
+  left:0;
+  padding-top:2px !important;
+  padding-bottom:5px !important;
+  right: auto;
+  color: #D4201F !important;
+  font-size: 20px !important;
+}
+
+.item-radio input ~ .radio-icon {
+    visibility: visible !important;
+}
+
+.item-radio > .radio-icon:before {
+    content: "\f3a6" !important; /*deselected - Ionic class = ion-android-radio-button-off */
+}
+
+.item-radio > input[type=radio]:checked ~ .radio-icon:before {
+    content: "\f3a7" !important; /*selected Ionic class = ion-android-radio-button-on */
+}
+
+
+/*  Line divider in Mobile Recharge*/
+#leftline {
+  position: relative;
+  float: left;
+  width: 49%;
+  margin-bottom: 10%;
+  margin-top: 2%;
+  padding: 0;
+  border-right: 1px solid black;
+  height:180px;
+}
+
+#rightline {
+  position: relative;
+  float: right;
+  margin-top: 2%;
+  width: 49%;
+  margin-bottom: 10%;
+  padding: 0;
+  height:180px;
+}
+

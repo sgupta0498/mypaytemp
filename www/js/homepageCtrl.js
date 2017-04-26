@@ -1,5 +1,29 @@
-myPay.controller('HomePageCtrl', function($scope,$state) {
+myPay.controller('HomePageCtrl', function($scope,$state,$window,$timeout) {
   //alert("asdfasf")
+  
+$scope.doRefresh = function() {
+    
+    console.log('Refreshing!');
+    $timeout( function() {
+      //simulate async response
+      /*$scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);*/
+
+      //Stop the ion-refresher from spinning
+      $scope.$broadcast('scroll.refreshComplete');
+    
+    }, 1000);
+      
+  };
+
+
+$state.go($state.current, {}, {reload: true});
+       
+ $scope.$on('floating-menu:open', function () {
+//                        alert('open');
+                                    });
+                                    $scope.$on('floating-menu:close', function () {
+//                        alert('close');
+                                    });
 
   $scope.sellprice=95000;
   $scope.buyprice=93000;
@@ -62,7 +86,7 @@ myPay.controller('HomePageCtrl', function($scope,$state) {
       $state.go('app.buyvouchers');
   }
   $scope.openMoobileRecharge=function(){
-      $state.go('app.mobilerecharge');
+      $state.go('app.recharge');
   }
   $scope.openSendAndReceiveBitCoins=function(){
       $state.go('app.sendrecievebitcoins');

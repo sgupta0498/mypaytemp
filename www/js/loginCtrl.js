@@ -14,6 +14,8 @@ myPay.controller('LoginCtrl', function($scope,$state,MyPayService,$cordovaDevice
        // alert("test"+angular.toJson(data));
         //MyPayService.login("  hiiiiiiiii " ) ;
          $state.go('app.homepage');
+         
+         
     }
     $scope.goToRegister = function () {
          $state.go('userregistration');

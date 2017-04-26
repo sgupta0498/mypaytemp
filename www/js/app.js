@@ -283,15 +283,64 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
         }
       }
     })
-.state('app.mobilerecharge', {
-      url: '/mobilerecharge',
+.state('app.recharge', {
+      url: '/recharge',
       views: {
         'menuContent': {
-         templateUrl: 'templates/buttonmenu/mobilerecharge.html'
+         templateUrl: 'templates/buttonmenu/recharge.html',
+          controller: 'RechargeCtrl'     
                       
         }
       }
-    })
+  })
+.state('app.rechargemobile', {
+      url: '/rechargemobile',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobile.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobileselectoperator', {
+      url: '/rechargemobileselectoperator',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobileselectoperator.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobileenteramount', {
+      url: '/rechargemobileenteramount',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobileenteramount.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobilerecharge', {
+      url: '/rechargemobilerecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobilerecharge.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobileconfirm', {
+      url: '/rechargemobileconfirm',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobileconfirm.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+
+
+
   .state('app.scannbitcoinaddress', {
       url: '/scannbitcoinaddress',
       views: {
@@ -332,7 +381,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 
   // if none of the above states are matched, use this as the fallback
 
-  $urlRouterProvider.otherwise('/userlogin');
+  $urlRouterProvider.otherwise('/app/homepage');
     //$urlRouterProvider.otherwise({redirectTo: "/app/mobilerecharge"})
 })
 .config(function (ionicDatePickerProvider) {

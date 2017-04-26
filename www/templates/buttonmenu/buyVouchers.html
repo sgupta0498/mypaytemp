@@ -8,7 +8,7 @@
             <input  type="text" ng-model="key" placeholder="Seach Vouchers">
           </label>
         </div>
-		<div class="card" ng-repeat="vourcher in vourcherData | filter: key">
+		<!-- <div class="card" ng-repeat="vourcher in vourcherData | filter: key">
 		  <div class="item item-text-wrap">
 		    <a class="item item-avatar" href="#">
 		      <img ng-src="{{vourcher.voucherImageUrl}}" alt="ad">
@@ -17,7 +17,23 @@
 		      <p >in stock</p>
 		    </a>
 		  </div>
-		</div>
+		</div> -->
+		 <ion-refresher on-refresh="doRefresh()">
+  </ion-refresher>
+	<div class="card" ng-repeat="vourcher in vourcherData | filter: key" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{vourcher.voucherImageUrl}}" alt="IMG" style="top: 0px;">
+        <p style="float: right;font-size: 11px;">{{vourcher.voucherRupees}} Rs.</p>
+		
+        <p style="font-size: 12px;"><b style="font-size: 12px;">{{vourcher.voucherName}}</b></p>
+        <p style="float: right;font-size: 11px;">{{vourcher.voucherOff}}%off</p>
+        <p style="font-size: 11px;">in stock</p>
+        </a>
+      </div>
+    </div>
+
+
 		<!-- <div class="card">
 		  <div class="item item-text-wrap">
 		    <a class="item item-avatar" href="#">
