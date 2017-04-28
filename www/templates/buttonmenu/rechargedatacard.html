@@ -1,0 +1,50 @@
+<ion-view view-title="Enter Mobile No">
+ <ion-content >
+	    <div class="col col-center text-center" ng-click="redirectToRechargeMobile()" >
+		    <a class="icon-circle icon-circle-outline icon-circle-large" style="color: #33cd5f !important">
+	          <i class="ion-usb"></i>
+	        </a>
+	        	<br>
+	       datacard
+	       <br>
+	       </div>
+
+
+     <ion-refresher on-refresh="doRefresh()">
+  </ion-refresher>
+
+        
+	       <div class="list" style="padding-left: 5%; padding-right: 5%;">
+   <label class="item item-input" style="font-size: 14px;border-width: 0px;">
+   <input type="text" placeholder=" enter datacard number" maxlength="10" style="border-bottom: 1px solid ;">
+   
+   </label>
+ 
+   
+
+
+</div>
+<div class="col col-center text-center" style="background-color: #387ef5; ">
+      Recent Transaction
+</div>
+
+<div class="card" ng-repeat="activity in currentUserAccountDetails" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{activity.imageUrl}}" alt="IMG" style="top: 0px;">
+        <p style="float: right;font-size: 11px;">{{activity.priceMessage}} Rs.</p>
+		
+        <p style="font-size: 12px;"><b style="font-size: 12px;">{{activity.mobileUserName}}</b></p>
+        <p style="float: right;font-size: 11px;">{{activity.activityTime}}</p>
+        <p style="font-size: 11px;">+91-{{activity.mobileNumber}}</p>
+        </a>
+      </div>
+</div>
+
+ </ion-content>
+<div class="bar bar-footer bar-positive footer-button  col col-center text-center">
+        <a class="button button-full button-clear button-icon text-center" href="#/app/rechargedatacardselectoperator" style="margin-top: 0px;">
+          Next<i class="icon  ion-chevron-right"></i>
+        </a>
+    </div>
+</ion-view>

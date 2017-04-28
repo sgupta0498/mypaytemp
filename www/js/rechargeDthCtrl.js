@@ -1,16 +1,20 @@
-myPay.controller('RechargeMobileCtrl', function($scope,$state,$timeout,SharedDataService) {
- // alert("asdasfd "+angular.toJson(SharedDataService));
- 
-$scope.mobile={
-  "type":"",
-  "number":"",
-  "operator":"",
-  "amount":""
-};
 
-     $scope.redirectToRechargeConfirmDetails = function(){
+
+  myPay.controller('RechargeDthCtrl', function($scope,$state,$timeout) {
+  //alert("asdasfd")
+  $scope.currentuserbalance=0;
+  $scope.currentuserpendingbalance=0;
+    $scope.sendToDeposite = function(){
+       $state.go('app.accountdetailsdeposite');
+    };
+     $scope.sendToWithdraw = function(){
       
-       $state.go('app.rechargemobileconfirm');
+       $state.go('app.accountdetailswithdraw');
+    };
+
+     $scope.redirectToRechargeDthConfirmDetails = function(){
+      
+       $state.go('app.rechargedthconfirm');
     };
 
     
@@ -28,16 +32,11 @@ $scope.doRefresh = function() {
       
   };
   $scope.serverSideList = [
-    { text: "Airtel", value: "Airtel" },
-    { text: "Vodafone", value: "Vodafone" },
-    { text: "Idea", value: "Idea" },
-    { text: "Reliance", value: "Reliance" },
-    { text: "Reliance-Jio", value: "Reliance-Jio" },
-    { text: "Mtnl", value: "Mtnl" },
-    { text: "Bsnl", value: "Bsnl" },
-    { text: "Tata-Docomo", value: "Tata-Docomo" },
-    { text: "Telnor", value: "Telnor" },
-    { text: "Aircel", value: "Aircel" }
+    { text: "Tata-Sky", value: "go" },
+    { text: "Airtel-digital", value: "py" },
+    { text: "Dish TV", value: "rb" },
+    { text: "Reliance-Digital TV", value: "rb" },
+    { text: "Videocon d2h", value: "rb" }
   ];
 
   $scope.currentUserAccountDetails=[

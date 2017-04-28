@@ -2,20 +2,20 @@
  <ion-content >
 	    <div class="col col-center text-center" ng-click="redirectToRechargeMobile()" >
 		    <a class="icon-circle icon-circle-outline icon-circle-large" style="color: #33cd5f !important">
-	          <i class="ion-iphone"></i>
+	          <i class="ion-ipad"></i>
 	        </a>
 	        	<br>
-	       Mobile
-	       <br>{{mobile}}
+	       dth
+	       <br>
 	       </div>
 
         <div class="col col-center text-center" style="">
-            +91-8802919545
+            678802919545
       </div>
       <div class="item item-divider">Select Mobile Operator</div>
         <ion-radio ng-repeat="item in serverSideList"
                    ng-value="item.value"
-                   ng-model="mobile.operator"
+                   ng-model="data.serverSide"
                    ng-change="serverSideChange(item)"
                    name="server-side">
           {{ item.text }}
@@ -26,8 +26,8 @@
 
  </ion-content>
 <div class="bar bar-footer bar-positive footer-button col col-center text-center">
-        <a class="button button-full button-clear button-icon text-center" href="#/app/rechargemobileenteramount" style="margin-top: 0px;">
-          Next<i class="icon  ion-chevron-right"></i>
+        <a class="button button-full button-clear button-icon text-center" href="#/app/rechargedthenteramount" style="margin-top: 0px;">
+         Next<i class="icon  ion-chevron-right"></i>
         </a>
   </div>
 </ion-view>

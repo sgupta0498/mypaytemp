@@ -307,10 +307,12 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/rechargemobileselectoperator.html',
+        
           controller: 'RechargeMobileCtrl'               
         }
       }
   })
+
 .state('app.rechargemobileenteramount', {
       url: '/rechargemobileenteramount',
       views: {
@@ -339,6 +341,102 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       }
   })
 
+
+.state('app.rechargedth', {
+      url: '/rechargedth',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedth.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthselectoperator', {
+      url: '/rechargedthselectoperator',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthselectoperator.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthenteramount', {
+      url: '/rechargedthenteramount',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthenteramount.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthrecharge', {
+      url: '/rechargedthrecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthrecharge.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthconfirm', {
+      url: '/rechargedthconfirm',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthconfirm.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+
+
+
+
+
+.state('app.rechargedatacard', {
+      url: '/rechargedatacard',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacard.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardselectoperator', {
+      url: '/rechargedatacardselectoperator',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardselectoperator.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardenteramount', {
+      url: '/rechargedatacardenteramount',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardenteramount.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardrecharge', {
+      url: '/rechargedatacardrecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardrecharge.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardconfirm', {
+      url: '/rechargedatacardconfirm',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardconfirm.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
 
 
   .state('app.scannbitcoinaddress', {

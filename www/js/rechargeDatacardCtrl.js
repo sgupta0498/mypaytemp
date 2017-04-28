@@ -1,18 +1,19 @@
-myPay.controller('RechargeMobileCtrl', function($scope,$state,$timeout,SharedDataService) {
- // alert("asdasfd "+angular.toJson(SharedDataService));
- 
-$scope.mobile={
-  "type":"",
-  "number":"",
-  "operator":"",
-  "amount":""
-};
 
-     $scope.redirectToRechargeConfirmDetails = function(){
+
+  myPay.controller('RechargeDatacardCtrl', function($scope,$state,$timeout) {
+  //alert("asdasfd")
+  $scope.currentuserbalance=0;
+  $scope.currentuserpendingbalance=0;
+    
+
+     $scope.redirectToRechargeDatacardConfirmDetails = function(){
       
-       $state.go('app.rechargemobileconfirm');
+       $state.go('app.rechargedatacardconfirm');
     };
-
+  $scope.redirectToRechargeDatacardConfirmDetailsCancel = function(){
+    alert("asdf")
+      // $state.go('app.homepage');
+    };
     
 $scope.doRefresh = function() {
     
@@ -28,16 +29,12 @@ $scope.doRefresh = function() {
       
   };
   $scope.serverSideList = [
-    { text: "Airtel", value: "Airtel" },
-    { text: "Vodafone", value: "Vodafone" },
-    { text: "Idea", value: "Idea" },
-    { text: "Reliance", value: "Reliance" },
-    { text: "Reliance-Jio", value: "Reliance-Jio" },
-    { text: "Mtnl", value: "Mtnl" },
-    { text: "Bsnl", value: "Bsnl" },
-    { text: "Tata-Docomo", value: "Tata-Docomo" },
-    { text: "Telnor", value: "Telnor" },
-    { text: "Aircel", value: "Aircel" }
+    { text: "MTS", value: "go" },
+    { text: "Airtel", value: "py" },
+    { text: "BSNL", value: "rb" },
+    { text: "MTNL", value: "rb" },
+    { text: "Reliance Net Connect", value: "rb" },
+    { text: "MTS MBlaze", value: "rb" }
   ];
 
   $scope.currentUserAccountDetails=[
