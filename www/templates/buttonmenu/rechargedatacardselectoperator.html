@@ -10,12 +10,12 @@
 	       </div>
 
         <div class="col col-center text-center" style="">
-            9136360449
+             {{datacard.number}} 
       </div>
       <div class="item item-divider">Select Mobile Operator</div>
         <ion-radio ng-repeat="item in serverSideList"
                    ng-value="item.value"
-                   ng-model="data.serverSide"
+                  ng-model="datacard.operator"
                    ng-change="serverSideChange(item)"
                    name="server-side">
           {{ item.text }}

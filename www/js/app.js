@@ -383,7 +383,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/rechargedthconfirm.html',
-          controller: 'RechargeMobileCtrl'               
+          controller: 'RechargeDthCtrl'               
         }
       }
   })

@@ -11,16 +11,16 @@
          </div>
 
         <div class="col col-center text-center" style="">
-            +91-8802919545
+            +91-{{mobile.number}}
       </div>
       <div class="col col-center text-center" style="">
-            Airtel
+            {{mobile.operator}}
       </div>
 
     </div>  
     <div id="rightline">
       <div class="col col-center text-center" style=" height: 175px;width: 175px; background-color: powderblue;border-radius: 10px;padding-top: 75px;" >
-        100 Rs.
+         {{mobile.amount}} Rs.
       </div>
       </div> 
 </div>
@@ -31,7 +31,7 @@
       <div class="col col-center text-center" style="">
             Recharge : 0.00345
       </div>
-      <button class="button icon-right button-positive" ng-click="veryPromocode()">Confirm</button>
+      <button class="button icon-right button-positive" ng-click="goHomePage()">Confirm</button>
        <button class="button button-assertive" ng-click="veryPromocode()">Cancel</button>
     </div>
   </div>

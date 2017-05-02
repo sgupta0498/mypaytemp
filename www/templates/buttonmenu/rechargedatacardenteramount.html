@@ -10,14 +10,14 @@
 	       </div>
 
         <div class="col col-center text-center" style="">
-           9136360449
+          {{datacard.number}} 
       </div>
       <div class="col col-center text-center" style="">
-           MTS
+           {{datacard.operator}} 
       </div>
 <div class="list" style="padding-left: 20%; padding-right: 20%;">
    <label class="item item-input" style="font-size: 14px;border-width: 0px;">
-   <input type="text" placeholder=" amount" maxlength="10" style="border-bottom: 1px solid ;">
+   <input type="text" placeholder=" amount" ng-model="datacard.amount" maxlength="10" style="border-bottom: 1px solid ;">
    </label>
  </div>
 

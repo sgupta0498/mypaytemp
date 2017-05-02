@@ -1,23 +1,20 @@
 
 
-  myPay.controller('RechargeDthCtrl', function($scope,$state,$timeout) {
+  myPay.controller('RechargeDthCtrl', function($scope,$state,$ionicHistory,$timeout,SharedDataServiceDth) {
   //alert("asdasfd")
-  $scope.currentuserbalance=0;
-  $scope.currentuserpendingbalance=0;
-    $scope.sendToDeposite = function(){
-       $state.go('app.accountdetailsdeposite');
-    };
-     $scope.sendToWithdraw = function(){
-      
-       $state.go('app.accountdetailswithdraw');
+
+  $scope.dth = SharedDataServiceDth;
+    $scope.redirectToRechargeDthConfirmDetails = function(){
+    $state.go('app.rechargedthconfirm');
     };
 
-     $scope.redirectToRechargeDthConfirmDetails = function(){
-      
-       $state.go('app.rechargedthconfirm');
-    };
-
-    
+    $scope.goHomePage = function() {
+  alert("test")
+   $ionicHistory.nextViewOptions({
+    disableBack: true
+  });
+   $state.go('app.homepage');  
+ }; 
 $scope.doRefresh = function() {
     
     console.log('Refreshing!');
@@ -32,11 +29,11 @@ $scope.doRefresh = function() {
       
   };
   $scope.serverSideList = [
-    { text: "Tata-Sky", value: "go" },
-    { text: "Airtel-digital", value: "py" },
-    { text: "Dish TV", value: "rb" },
-    { text: "Reliance-Digital TV", value: "rb" },
-    { text: "Videocon d2h", value: "rb" }
+    { text: "Tata-Sky", value: "Tata-Sky" },
+    { text: "Airtel-digital", value: "Airtel-digital" },
+    { text: "Dish TV", value: "Dish TV" },
+    { text: "Reliance-Digital TV", value: "Reliance-Digital TV" },
+    { text: "Videocon d2h", value: "Videocon d2h" }
   ];
 
   $scope.currentUserAccountDetails=[

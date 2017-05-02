@@ -11,16 +11,16 @@
          </div>
 
         <div class="col col-center text-center" style="">
-            9136360449
+            {{datacard.number}} 
       </div>
       <div class="col col-center text-center" style="">
-           MTS
+            {{datacard.operator}} 
       </div>
 
     </div>  
     <div id="rightline">
       <div class="col col-center text-center" style=" height: 175px;width: 175px; background-color: powderblue;border-radius: 10px;padding-top: 75px;" >
-        399 Rs.
+         {{datacard.amount}}  Rs.
       </div>
       </div> 
 </div>
@@ -29,7 +29,7 @@
 <div class="col col-center text-center" style="">
     
       
-      <button class="button icon-right button-positive" ng-click="veryPromocode()">Confirm</button>
+      <button class="button icon-right button-positive" ng-click="goHomePage()">Confirm</button>
        <button class="button button-assertive" ng-click="redirectToRechargeDatacardConfirmDetailsCancel()">Cancel</button>
     </div>
   </div>

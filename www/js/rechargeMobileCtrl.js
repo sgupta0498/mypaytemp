@@ -1,32 +1,36 @@
-myPay.controller('RechargeMobileCtrl', function($scope,$state,$timeout,SharedDataService) {
+myPay.controller('RechargeMobileCtrl', function($scope,$state,$timeout,SharedDataService,$ionicHistory) {
  // alert("asdasfd "+angular.toJson(SharedDataService));
  
-$scope.mobile={
+/*$scope.mobile={
   "type":"",
   "number":"",
   "operator":"",
   "amount":""
-};
+};*/
+
+$scope.mobile = SharedDataService;
 
      $scope.redirectToRechargeConfirmDetails = function(){
-      
        $state.go('app.rechargemobileconfirm');
     };
-
-    
+$scope.goHomePage = function() {
+  alert("test")
+   $ionicHistory.nextViewOptions({
+    disableBack: true
+  });
+   $state.go('app.homepage');  
+ }; 
+ 
 $scope.doRefresh = function() {
     
     console.log('Refreshing!');
     $timeout( function() {
       //simulate async response
       /*$scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);*/
-
       //Stop the ion-refresher from spinning
       $scope.$broadcast('scroll.refreshComplete');
-    
     }, 1000);
-      
-  };
+};
   $scope.serverSideList = [
     { text: "Airtel", value: "Airtel" },
     { text: "Vodafone", value: "Vodafone" },

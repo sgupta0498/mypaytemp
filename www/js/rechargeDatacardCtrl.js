@@ -1,10 +1,11 @@
 
 
-  myPay.controller('RechargeDatacardCtrl', function($scope,$state,$timeout) {
+  myPay.controller('RechargeDatacardCtrl', function($scope,$state,$ionicHistory,$timeout,SharedDataServiceDatacard) {
   //alert("asdasfd")
-  $scope.currentuserbalance=0;
-  $scope.currentuserpendingbalance=0;
-    
+
+  $scope.datacard = SharedDataServiceDatacard;
+
+
 
      $scope.redirectToRechargeDatacardConfirmDetails = function(){
       
@@ -14,7 +15,13 @@
     alert("asdf")
       // $state.go('app.homepage');
     };
-    
+  $scope.goHomePage = function() {
+  alert("test")
+   $ionicHistory.nextViewOptions({
+    disableBack: true
+  });
+   $state.go('app.homepage');  
+ };   
 $scope.doRefresh = function() {
     
     console.log('Refreshing!');
@@ -29,12 +36,12 @@ $scope.doRefresh = function() {
       
   };
   $scope.serverSideList = [
-    { text: "MTS", value: "go" },
-    { text: "Airtel", value: "py" },
-    { text: "BSNL", value: "rb" },
-    { text: "MTNL", value: "rb" },
-    { text: "Reliance Net Connect", value: "rb" },
-    { text: "MTS MBlaze", value: "rb" }
+    { text: "MTS", value: "MTS" },
+    { text: "Airtel", value: "Airtel" },
+    { text: "BSNL", value: "BSNL" },
+    { text: "MTNL", value: "MTNL" },
+    { text: "Reliance Net Connect", value: "Reliance Net Connect" },
+    { text: "MTS MBlaze", value: "MTS MBlaze" }
   ];
 
   $scope.currentUserAccountDetails=[
