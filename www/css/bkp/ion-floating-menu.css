@@ -149,8 +149,8 @@
     position: absolute;
     left: 0.5px;
     top: 0.5px;
-    width: 88%;
-    height: 88%;
+    width: 98%;
+    height: 98%;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     padding: 0;
@@ -204,43 +204,43 @@
 }*/
 
 #floating-menu ion-floating-item > li  {
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: .4s;
+    transition: all .0s;
+    -webkit-transition: all .0s;
+    -moz-transition: .0s;
 }
 
 #floating-menu.active ion-floating-item:nth-child(1) > li {
-    transform: translateY(-60px);
-    -webkit-transform:translateY(-60px);
+    transform: translateY(-70px);
+    -webkit-transform:translateY(-70px);
     transition-delay: 0ms; -webkit-transition-delay: 0ms;
 }
 #floating-menu.active ion-floating-item:nth-child(2) > li {
-    transform: translateY(-120px);
-     -webkit-transform:translateY(-120px);
+    transform: translateY(-140px);
+     -webkit-transform:translateY(-140px);
     transition-delay: 0ms; -webkit-transition-delay: 0ms;
 }
 #floating-menu.active ion-floating-item:nth-child(3) > li {
-    transform: translateY(-180px);
-     -webkit-transform:translateY(-180px);
-    transition-delay: 0ms; -webkit-transition-delay: 0ms;
+    transform: translateY(-210px);
+     -webkit-transform:translateY(-210px);
+    transition-delay: 0ms; -webkit-transition-delay: 100ms;
 }
 #floating-menu.active ion-floating-item:nth-child(4) > li {
-    transform: translateY(-240px);
-     -webkit-transform:translateY(-240px);
+    transform: translateY(-280px);
+     -webkit-transform:translateY(-280px);
     transition-delay: 0ms; -webkit-transition-delay: 0ms;
 }
 #floating-menu.active ion-floating-item:nth-child(5) > li {
-    transform: translateY(-300px);
-     -webkit-transform:translateY(-300px);
+    transform: translateY(-350px);
+     -webkit-transform:translateY(-350px);
     transition-delay: 0ms; -webkit-transition-delay: 0ms;
 }
 #floating-menu.active ion-floating-item:nth-child(6) > li {
-    transform: translateY(-360px);
-     -webkit-transform:translateY(-360px);
+    transform: translateY(-420px);
+     -webkit-transform:translateY(-420px);
     transition-delay: 0ms; -webkit-transition-delay: 0ms;
 }
 #floating-menu.active ion-floating-item:nth-child(7) > li {
-    transform: translateY(-420px);
-     -webkit-transform:translateY(-420px);
+    transform: translateY(-490px);
+     -webkit-transform:translateY(-490px);
     transition-delay: 0ms; -webkit-transition-delay: 0ms;
 }
