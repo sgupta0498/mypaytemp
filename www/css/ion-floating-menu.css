@@ -204,9 +204,9 @@
 }*/
 
 #floating-menu ion-floating-item > li  {
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: .4s;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+    -moz-transition: .1s;
 }
 
 #floating-menu.active ion-floating-item:nth-child(1) > li {

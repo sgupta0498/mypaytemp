@@ -9,11 +9,11 @@
         <ion-content>
 		<div class="row">
 		  <div class="col col-offset-5 col-center text-center" >
-		  	 <!--  <div zingchart id="chart-1" zc-json="myJson" zc-width="325" zc-height="400"></div>     -->
-             <canvas id="line" class="chart chart-line" chart-data="data"
-chart-labels="labels"  chart-options="options"
-chart-dataset-override="datasetOverride" chart-click="onClick">
-</canvas
+		  	 
+             <canvas id="line" class="chart chart-line" chart-data="data3M"
+chart-labels="labels3M"  chart-options="options3M"
+chart-dataset-override="datasetOverride3M" chart-click="onClick3M">
+</canvas>
 		  </div>
 		</div>         
           </ion-content>
@@ -26,6 +26,15 @@ chart-dataset-override="datasetOverride" chart-click="onClick">
                 <ion-nav-view name="tab-tab2">
                     <ion-content>
         
+    <div class="row">
+      <div class="col col-offset-5 col-center text-center" >
+         <!--  <div zingchart id="chart-1" zc-json="myJson" zc-width="325" zc-height="400"></div>     -->
+             <canvas id="line" class="chart chart-line" chart-data="data1M"
+chart-labels="labels1M"  chart-options="options1M"
+chart-dataset-override="datasetOverride1M" chart-click="onClick1M">
+</canvas>
+      </div>
+    </div> 
     				</ion-content>
                 </ion-nav-view>
             </ion-tab>
@@ -36,6 +45,15 @@ chart-dataset-override="datasetOverride" chart-click="onClick">
                 <ion-nav-view name="tab-tab3">
                     <ion-content>
         
+    <div class="row">
+      <div class="col col-offset-5 col-center text-center" >
+         <!--  <div zingchart id="chart-1" zc-json="myJson" zc-width="325" zc-height="400"></div>     -->
+             <canvas id="line" class="chart chart-line" chart-data="data1W"
+chart-labels="labels1W"  chart-options="options1W"
+chart-dataset-override="datasetOverride1W" chart-click="onClick1W">
+</canvas>
+      </div>
+    </div> 
     </ion-content>
                 </ion-nav-view>
             </ion-tab>

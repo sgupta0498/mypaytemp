@@ -1,4 +1,62 @@
 var myPay =angular.module('starter.controllers', [])
+myPay.directive('onValidSubmit', ['$parse', '$timeout', function($parse, $timeout) {
+    return {
+      require: '^form',
+      restrict: 'A',
+      link: function(scope, element, attrs, form) {
+        form.$submitted = false;
+        var fn = $parse(attrs.onValidSubmit);
+        element.on('submit', function(event) {
+          scope.$apply(function() {
+            element.addClass('ng-submitted');
+            form.$submitted = true;
+            if (form.$valid) {
+              if (typeof fn === 'function') {
+                fn(scope, {$event: event});
+              }
+            }
+          });
+        });
+      }
+    }
+ 
+  }])
+myPay.directive('validated', ['$parse', function($parse) {
+    return {
+      restrict: 'AEC',
+      require: '^form',
+      link: function(scope, element, attrs, form) {
+        var inputs = element.find("*");
+        for(var i = 0; i < inputs.length; i++) {
+          (function(input){
+            var attributes = input.attributes;
+            if (attributes.getNamedItem('ng-model') != void 0 && attributes.getNamedItem('name') != void 0) {
+              var field = form[attributes.name.value];
+              if (field != void 0) {
+                scope.$watch(function() {
+                  
+                  return form.$submitted + "_" + field.$valid;
+                }, function() {
+                 
+                  if (form.$submitted != true) return;
+                  var inp = angular.element(input);
+                  if (inp.hasClass('ng-invalid')) {
+                    
+                    element.removeClass('has-success');
+                    element.addClass('has-error');
+                  } else if (inp.hasClass('ng-valid')){
+                   
+                    element.removeClass('has-error');
+                    element.addClass('has-success');
+                  }
+                });
+              }
+            }
+          })(inputs[i]);
+        }
+      }
+    }
+  }])
 myPay.directive('qrcode', function($interpolate) {  
   return {
     restrict: 'E',
@@ -54,7 +112,12 @@ myPay.controller('AppCtrl', function($scope, $ionicModal, $timeout,$state) {
   $scope.login = function() {
     $scope.modal.show();
   };
-$scope.test = function() {
+  $scope.userProfileDetails={
+    "userName":"Arjun",
+    "mobileNumber":"8988965645",
+    "userProfileImageUrl":"img/mcfly.jpg"
+  }
+  $scope.showUserProfile = function() {
    //alert("hii");
     $state.go('app.userprofile');
     

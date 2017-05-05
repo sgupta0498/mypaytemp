@@ -1,25 +1,82 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+<ion-view  name="login-view">
+<ion-header-bar align-title="center" class="bar-positive">
+ 
+  <h1 class="title">Sign-In</h1>
+  
+</ion-header-bar>
+  <ion-content class="padding" >
+<!--   <form novalidate="novalidate" on-valid-submit="doLogin()">
+    <div class="list card">
+      <div class="item item-divider">Enter your info:</div>
+      <label class="item item-input validated">
+        <span class="input-label">eMail</span>
+        <input type="email" ng-model="user.email" required="required" name="email">
+        <i class="icon ion-alert-circled error col col-10"></i>
+      </label>
+      <label class="item item-input validated row">
+        <span class="input-label col col-33">Password</span>
+        <input type="password" ng-model="user.password" name="password" required="required" class="col col-50">
+        <i class="icon ion-alert-circled error col col-10" style="min-width: 16px;"></i>
+      </label>
     </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
+    <div class="padding">
+      <button type="submit" class="button icon-right ion-chevron-right button-block button-energized">
+        login 
+      </button>
+    </div>
+    </form> -->
+<!--  <form novalidate="novalidate" on-valid-submit="doLogin()">
+    <div class="list card">
+      <div class="item item-divider">Enter your info:</div>
+      <label class="item item-input validated">
+        <span class="input-label">eMail</span>
+        <input type="email" ng-model="user.email" required="required" name="email">
+        <i class="icon ion-alert-circled error col col-10"></i>
+      </label>
+      <label class="item item-input validated row">
+        <span class="input-label col col-33">Password</span>
+        <input type="password" ng-model="user.password" name="password" required="required" class="col col-50">
+        <i class="icon ion-alert-circled error col col-10" style="min-width: 16px;"></i>
+      </label>
+    </div>
+    <div class="padding">
+      <button type="submit" class="button icon-right ion-chevron-right button-block button-energized">
+        login
+      </button>
+    </div>
+    </form> -->
+    <form novalidate="novalidate" on-valid-submit="doLogin(user)">
+      <div class="list list-inset">
+          <label class="item item-input validated">
+              <input type="text" ng-model="user.username" name="name" required="required" placeholder="User Name" >
+               <i class="icon ion-alert-circled error " style="min-width: 16px;"></i>
+          </label>
+          <label class="item item-input validated">
+             <input type="password" ng-model="user.password" name="password" placeholder="Password"  required="required" >
+               <i class="icon ion-alert-circled error " style="min-width: 16px;"></i>
+
+          </label>
       </div>
-    </form>
+      <button type="submit" class="button button-block button-positive" >Login</button>
+     </form> 
+      <p class="text-center">
+      <a href="#/userregistration" class="button button-positive button-clear button-block ">Or create an account</a>  </p>
+
+      <p class="text-center">
+                <a href="">Forgot password</a>
+       </p>
+
   </ion-content>
-</ion-modal-view>
+
+
+</ion-view>
+<!-- 
+<ion-header-bar align-title="center" class="bar-positive">
+  <div class="buttons">
+    <button class="button" ng-click="doSomething()">Left Button</button>
+  </div>
+  <h1 class="title"><img class="title-image" src="http://www.ionicframework.com/img/ionic-logo-white.svg" width="123" height="43" /></h1>
+  <div class="buttons">
+    <button class="button">Right Button</button>
+  </div>
+</ion-header-bar> -->

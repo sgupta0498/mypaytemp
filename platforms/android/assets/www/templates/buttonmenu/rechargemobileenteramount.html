@@ -1,0 +1,30 @@
+<ion-view view-title="Enter Amount">
+ <ion-content >
+	    <div class="col col-center text-center" ng-click="redirectToRechargeMobile()" >
+		    <a class="icon-circle icon-circle-outline icon-circle-large" style="color: #33cd5f !important">
+	          <i class="ion-iphone"></i>
+	        </a>
+	        	<br>
+	       Mobile
+	       <br>
+	       </div>
+
+        <div class="col col-center text-center" style="">
+           +91-{{mobile.number}}
+      </div>
+      <div class="col col-center text-center" style="">
+            {{mobile.operator}}
+      </div>
+<div class="list" style="padding-left: 20%; padding-right: 20%;">
+   <label class="item item-input" style="font-size: 14px;border-width: 0px;">
+   <input type="text" placeholder=" amount" ng-model="mobile.amount" maxlength="10" style="border-bottom: 1px solid ;">
+   </label>
+ </div>
+
+ </ion-content>
+<div class="bar bar-footer bar-positive footer-button col col-center text-center">
+        <a class="button button-full button-clear button-icon  " href="#/app/rechargemobilerecharge" style="margin-top: 0px;">
+           Next<i class="icon  ion-chevron-right"></i>
+        </a>
+</div>
+</ion-view>

@@ -6,10 +6,10 @@
         <ion-content class="padding">
           <div class="list">
             <label class="item item-input">
-               <textarea class="textareas" id="postMessageInput" ng-model="$parent.post.message" placeholder="Description"  autofocus ></textarea>
+               <textarea class="textareas" id="postMessageInput" ng-model="ticketDetails" placeholder="Description"  autofocus ></textarea>
             </label>
            
-            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+            <button class="button button-full button-positive" ng-click="createTicketRequest(ticketDetails)">Create</button>
           </div>
         </ion-content>
       </ion-modal-view>

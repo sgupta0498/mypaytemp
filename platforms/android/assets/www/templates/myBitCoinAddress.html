@@ -3,19 +3,23 @@
         <ion-content>
 
         <div class="col col-center text-center" style="margin-left: 32%;margin-top: 8%;" >
-                <qrcode text="3BftToNURo4osQDQSrLa9M5WBDmvw2reur">
+                <qrcode text="{{userBitAddress}}">
                 </qrcode>
         </div>
         <div class="col col-center text-center" >
-            <div class=" item-divider">3BftToNURo4osQDQSrLa9M5WBDmvw2reur </div> 
+            <div class=" item-divider">{{userBitAddress}} </div> 
         </div>
         <div class="col col-center text-center" >
-           <button class="button button-positive button-small" ng-click="copyAddress()">
+           <!-- <button class="button button-positive button-small" ng-click="copyAddress()">
             Copy
           </button>
           <button class="button button-positive button-small"  ng-click="shareAddress()">
             Share
-          </button>  
+          </button>   -->
+          <button  class="button icon ion-ios-copy" ng-click="copyAddress()" style="background-color: #ffffff;">
+          </button>
+          <button class="button icon ion-share" ng-click="shareAddress()" style="background-color: #ffffff;">
+          </button>
         </div>
         </ion-content>
       </ion-view>

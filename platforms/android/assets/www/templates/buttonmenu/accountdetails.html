@@ -2,16 +2,31 @@
  <ion-content >
 	    <div class="row" >
 		  <div class="col col-center text-center">
-		    <h2 >0 Rs.</h2>
-		    <h5 >Pending 0 Rs.</h5>
+		    <h2 >{{currentuserbalance}} Rs.</h2>
+		    <h5 >Pending {{currentuserpendingbalance}} Rs.</h5>
 		  </div>
 		</div>
 		<div class = "row " style="background-color: #33cd5f">
-		   <div class = "col col-5 col-center text-center"></div>
-		   <div class = "col col-35 col-center text-center" ng-click="sendToDeposite()" style="cursor: pointer;"><i class="icon ion-bag"></i>Deposite</div>
+		 
+		   <div class = "col col-45 col-center text-center" ng-click="sendToDeposite()" style="cursor: pointer;"><i class="icon ion-bag"></i>Deposite</div>
 		    <div class = "col col-10 col-center text-center">|</div>
-		   <div class = "col col-35 col-center text-center" ng-click="sendToWithdraw()" style="cursor: pointer;"><i class="icon ion-bag"></i>Withdraw</div>
-		   <div class = "col col-5 col-center text-center"></div>
+		   <div class = "col col-45 col-center text-center" ng-click="sendToWithdraw()" style="cursor: pointer;"><i class="icon ion-bag"></i>Withdraw</div>
+		   
 		 </div>
+		 <ion-refresher on-refresh="doRefresh()">
+  </ion-refresher>
+	<div class="card" ng-repeat="activity in currentUserAccountDetails" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{activity.imageUrl}}" alt="IMG" style="top: 0px;">
+        <p style="float: right;font-size: 11px;">{{activity.priceMessage}} Rs.</p>
+		
+        <p style="font-size: 12px;"><b style="font-size: 12px;">{{activity.activityName}}</b></p>
+        <p style="float: right;font-size: 11px;">{{activity.activityTime}}</p>
+        <p style="font-size: 11px;">{{activity.activityDesc}}</p>
+        </a>
+      </div>
+    </div>
+
  </ion-content>
 </ion-view>

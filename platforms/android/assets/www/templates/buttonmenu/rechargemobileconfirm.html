@@ -1,0 +1,43 @@
+<ion-view view-title="Recharge Confirm">
+ <ion-content >
+      
+<div >
+    <div id="leftline"><div class="col col-center text-center"  >
+        <a class="icon-circle icon-circle-outline icon-circle-large" style="color: #33cd5f !important">
+            <i class="ion-iphone"></i>
+          </a>
+           
+         <br>
+         </div>
+
+        <div class="col col-center text-center" style="">
+            +91-{{mobile.number}}
+      </div>
+      <div class="col col-center text-center" style="">
+            {{mobile.operator}}
+      </div>
+
+    </div>  
+    <div id="rightline">
+      <div class="col col-center text-center" style=" height: 175px;width: 175px; background-color: powderblue;border-radius: 10px;padding-top: 75px;" >
+         {{mobile.amount}} Rs.
+      </div>
+      </div> 
+</div>
+
+ <div class="list" style="">
+<div class="col col-center text-center" style="">
+    
+      <div class="col col-center text-center" style="">
+            Recharge : 0.00345
+      </div>
+      <button class="button icon-right button-positive" ng-click="goHomePage()">Confirm</button>
+       <button class="button button-assertive" ng-click="veryPromocode()">Cancel</button>
+    </div>
+  </div>
+ </ion-content>
+</ion-view>
+
+
+
+

@@ -419,3 +419,13 @@ form .has-success {
   height:180px;
 }
 
+/*Shadow of line*/
+
+      .bottomshadow {
+
+        box-shadow: 0 5px 5px -5px #333;
+      }
+
+      .topshadow {
+        box-shadow: 0 -5px 5px -5px #333;
+      }

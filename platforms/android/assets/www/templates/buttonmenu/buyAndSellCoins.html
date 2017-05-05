@@ -26,11 +26,11 @@
     <div class="col col-center text-center" style="padding-left: 5%;padding-right: 5%;">
       <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="Enter Amount">
+            <input  type="text" ng-model="buyAmount.amount" placeholder="Enter Amount">
           </label>
         </div>
       <div class="col col-center text-center">
-        <button class="button button-positive button-small">
+        <button class="button button-block button-positive" ng-click="buyAmountAction()">
           buy
         </button>
       </div>
@@ -77,11 +77,11 @@
     <div class="col col-center text-center" style="padding-left: 5%;padding-right: 5%;">
       <div class="list list-inset" >
           <label class="item item-input">
-            <input  type="text" placeholder="Enter Amount">
+            <input  type="text" ng-model="sellAmount.amount" placeholder="Enter Amount">
           </label>
         </div>
       <div class="col col-center text-center">
-        <button class="button button-positive button-small">
+        <button  class="button button-block button-positive" ng-click="sellAmountAction()">
           sell
         </button>
       </div>

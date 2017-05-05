@@ -8,32 +8,36 @@
     <ion-floating-item icon="ion-card" text="account" click="openAccount()"></ion-floating-item>
 </ion-floating-menu>
   <ion-content>
+  <ion-refresher on-refresh="doRefresh()">
+  </ion-refresher>
   <div class="row" >
        
         <div class="col col-center text-center">
-          buy 1 Bitcoin = 95,000 Rs.
+          buy 1 Ƀ = {{buyprice}} Rs.
         </div>
         <div class=" col-center text-center">
           |
         </div>
         <div class="col col-center text-center">
-          sell 1 Bitcoin = 94,000 Rs.
+          sell 1 Ƀ = {{sellprice}} Rs.
         </div>
       </div>
-      <div class="col col-center text-center" >
-        <span style="font-size: 2.5em;">1 Bitcoin</span>    
+      <div class="col col-center text-center bottomshadow"></div>
+
+      <div class="col col-center text-center" style="margin-top: 5px;">
+        <span style="font-size: 2.5em;">{{currentUserBalance}} Bitcoin</span>    
       </div>
-        
-    <div class="card">
-      <div class="item item-text-wrap">
-        <a class="item item-avatar" href="#">
-        <img src="img/man.jpeg" alt="Ravi">
-        <h2>Request for Bitcoins</h2>  <p style="float: right;">1 hour ago</p>
-        <p >for 10 bit</p>
+        <div class="col col-center text-center topshadow"></div>
+    <div class="card" ng-repeat="activity in currentUserActivities" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+      <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
+        <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
+        <img ng-src="{{activity.imageUrl}}" alt="IMG" style="top: 0px;">
+        <h2 >{{activity.activityName}}</h2>  <p style="float: right;font-size: 11px;">{{activity.activityTime}}</p>
+        <p style="font-size: 11px;">{{activity.priceMessage}}</p>
         </a>
       </div>
     </div>
-   <div class="card">
+   <!-- <div class="card">
       <div class="item item-text-wrap">
         <a class="item item-avatar" href="#">
         <img src="img/Vodafone_logo.png" alt=" Recharge">
@@ -50,7 +54,7 @@
         <p >1 b recieved</p>
         </a>
       </div>
-    </div>
+    </div> -->
     
   </ion-content>
 </ion-view>

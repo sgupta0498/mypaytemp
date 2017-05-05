@@ -1,5 +1,4 @@
 
-
 myPay.controller('SettingsPinChangeCtrl', function($scope) {
  
 
@@ -86,23 +85,3 @@ myPay.controller('SettingsPinChangeCtrl', function($scope) {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

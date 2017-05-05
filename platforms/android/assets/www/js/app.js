@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controllers','ionic-datepicker','zingchart-angularjs', 
-  'ion-floating-menu','ion-digit-keyboard','chart.js'])
+  'ion-floating-menu','ion-digit-keyboard','chart.js','mypayservice'])
  
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -16,7 +16,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 
         // Don't remove this line unless you know what you are doing. It stops the viewport
         // from snapping when text inputs are focused. Ionic handles this internally for
-        // a much nicer keyboard experience.
+        // a much nicer keyboard evoxperience.
         cordova.plugins.Keyboard.disableScroll(true);
       }
       if (window.StatusBar) {
@@ -79,6 +79,38 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+/*.state('userregistration', {
+      url: '/userregistration',
+      views: {
+        'menuContent': {
+        templateUrl: 'templates/registration.html',
+        controller: 'RegistraionCtrl'
+       
+        }
+      }
+})
+.state('userlogin', {
+      url: '/userlogin',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+       
+        }
+      }
+})*/
+.state('userregistration', {
+    url: '/userregistration',
+   
+    templateUrl: 'templates/registration.html',
+    controller: 'RegistraionCtrl'
+  })
+.state('userlogin', {
+    url: '/userlogin',
+   
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
     .state('app', {
     url: '/app',
     abstract: true,
@@ -87,7 +119,26 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
   })
 
   
-
+/*.state('app.userregistration', {
+      url: '/userregistration',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/registration.html',
+          controller: 'RegistraionCtrl'
+       
+        }
+      }
+})*/
+/*.state('app.userlogin', {
+      url: '/userlogin',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+       
+        }
+      }
+})*/
 .state('app.userprofile', {
       url: '/userprofile',
       views: {
@@ -137,7 +188,8 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       url: '/freebitcoins',
       views: {
         'menuContent': {
-         templateUrl: 'templates/freebitcoins.html'       
+         templateUrl: 'templates/freebitcoins.html',
+         controller: 'FreeBitCoinCtrl'       
         }
       }
     })
@@ -218,7 +270,7 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/buyVouchers.html',
-          controller: 'TradeBitCoinCtrl'                
+          controller: 'BuyVouchersCtrl'                
         }
       }
     })
@@ -227,19 +279,166 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
       views: {
         'menuContent': {
          templateUrl: 'templates/buttonmenu/sendrecievebitcoins.html',
-          controller: 'TradeBitCoinCtrl'                
+          controller: 'SendRecieveCoinCtrl'                
         }
       }
     })
-.state('app.mobilerecharge', {
-      url: '/mobilerecharge',
+.state('app.recharge', {
+      url: '/recharge',
       views: {
         'menuContent': {
-         templateUrl: 'templates/buttonmenu/mobilerecharge.html'
+         templateUrl: 'templates/buttonmenu/recharge.html',
+          controller: 'RechargeCtrl'     
                       
         }
       }
-    })
+  })
+.state('app.rechargemobile', {
+      url: '/rechargemobile',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobile.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobileselectoperator', {
+      url: '/rechargemobileselectoperator',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobileselectoperator.html',
+        
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+
+.state('app.rechargemobileenteramount', {
+      url: '/rechargemobileenteramount',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobileenteramount.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobilerecharge', {
+      url: '/rechargemobilerecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobilerecharge.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+.state('app.rechargemobileconfirm', {
+      url: '/rechargemobileconfirm',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargemobileconfirm.html',
+          controller: 'RechargeMobileCtrl'               
+        }
+      }
+  })
+
+
+.state('app.rechargedth', {
+      url: '/rechargedth',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedth.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthselectoperator', {
+      url: '/rechargedthselectoperator',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthselectoperator.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthenteramount', {
+      url: '/rechargedthenteramount',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthenteramount.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthrecharge', {
+      url: '/rechargedthrecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthrecharge.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+.state('app.rechargedthconfirm', {
+      url: '/rechargedthconfirm',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedthconfirm.html',
+          controller: 'RechargeDthCtrl'               
+        }
+      }
+  })
+
+
+
+
+
+.state('app.rechargedatacard', {
+      url: '/rechargedatacard',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacard.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardselectoperator', {
+      url: '/rechargedatacardselectoperator',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardselectoperator.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardenteramount', {
+      url: '/rechargedatacardenteramount',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardenteramount.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardrecharge', {
+      url: '/rechargedatacardrecharge',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardrecharge.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+.state('app.rechargedatacardconfirm', {
+      url: '/rechargedatacardconfirm',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/rechargedatacardconfirm.html',
+          controller: 'RechargeDatacardCtrl'               
+        }
+      }
+  })
+
+
   .state('app.scannbitcoinaddress', {
       url: '/scannbitcoinaddress',
       views: {
@@ -267,7 +466,15 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
         }
       }
     })
-
+  .state('app.depositerequestinvoice', {
+      url: '/depositerequestinvoice',
+      views: {
+        'menuContent': {
+         templateUrl: 'templates/buttonmenu/depositeRequestInvoice.html',
+          controller: 'AccountDetailsDepositRequestDetailsCtrl'                
+        }
+      }
+    })
   ;
 
   // if none of the above states are matched, use this as the fallback
@@ -295,7 +502,4 @@ angular.module('starter', ['ionic','ngCordova', 'ionic.cloud','starter.controlle
     };
     ionicDatePickerProvider.configDatePicker(datePickerObj);
   })
-
-
-
 ;

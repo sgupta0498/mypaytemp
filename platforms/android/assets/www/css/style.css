@@ -147,7 +147,11 @@ ul.img-list li:hover span.text-content {
 .icon-circle-small {
   width: 24px;
   height: 24px;
-  font-size: 20px;
+  font-size: 14px;
+}
+.icon-circle-small-mobile {
+  height: 24px;
+  font-size: 14px;
 }
 
 
@@ -282,3 +286,146 @@ ion-pane#login-2 {
 .colline{
  border-bottom: 1px solid #ccc;
 }
+
+
+
+
+/*Validation */ 
+
+form i.icon.error {
+  color: #ef4e3a; 
+  
+}
+
+form input + i.icon.error {
+  display: none;
+  margin-left: 8px;
+
+}
+
+form.ng-submitted input.ng-invalid + i.icon.error {
+  display: block; 
+}
+
+
+/*
+form .has-error {
+  border-left: 3px solid #cc2511; 
+  border-right: 3px solid #cc2511; 
+}
+
+form .has-success {
+  border-left: 3px solid #3d8b3d; 
+  border-right: 3px solid #3d8b3d; 
+}*/
+
+
+
+.validated {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; 
+}
+
+.validated .input-label {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%; 
+}
+
+.validated input {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 80%; 
+}
+
+.validated error {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 10%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+  max-width: 10%; 
+
+}
+
+
+
+
+
+
+/* Radio Button Styles here */
+.item-icon-left .item-content {
+  padding-left:3em !important;  
+  padding-top:5px !important;
+  padding-bottom:5px !important;
+  background-color: white !important;  
+}
+
+.item-icon-left i {
+  left:0;
+  padding-top:2px !important;
+  padding-bottom:5px !important;
+  right: auto;
+  color: #D4201F !important;
+  font-size: 20px !important;
+}
+
+.item-radio input ~ .radio-icon {
+    visibility: visible !important;
+}
+
+.item-radio > .radio-icon:before {
+    content: "\f3a6" !important; /*deselected - Ionic class = ion-android-radio-button-off */
+}
+
+.item-radio > input[type=radio]:checked ~ .radio-icon:before {
+    content: "\f3a7" !important; /*selected Ionic class = ion-android-radio-button-on */
+}
+
+
+/*  Line divider in Mobile Recharge*/
+#leftline {
+  position: relative;
+  float: left;
+  width: 49%;
+  margin-bottom: 10%;
+  margin-top: 2%;
+  padding: 0;
+  border-right: 1px solid black;
+  height:180px;
+}
+
+#rightline {
+  position: relative;
+  float: right;
+  margin-top: 2%;
+  width: 49%;
+  margin-bottom: 10%;
+  padding: 0;
+  height:180px;
+}
+
+/*Shadow of line*/
+
+      .bottomshadow {
+
+        box-shadow: 0 5px 5px -5px #333;
+      }
+
+      .topshadow {
+        box-shadow: 0 -5px 5px -5px #333;
+      }

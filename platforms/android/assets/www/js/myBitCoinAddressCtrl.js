@@ -4,11 +4,13 @@
 
 myPay.controller('MyBitCoinAddressCtrl', function($scope, $cordovaClipboard,$cordovaSocialSharing,$ionicPopup) {
 
+
+$scope.userBitAddress="3BftToNURo4osQDQSrLa9M5WBDmvw2reurtst";
 $scope.copyAddress=function(){
 
   console.log("text copied")
 	$cordovaClipboard
-    .copy('3BftToNURo4osQDQSrLa9M5WBDmvw2reur')
+    .copy($scope.userBitAddress)
     .then(function () {
        $scope.showAlert = function() {
    var alertPopup = $ionicPopup.alert({
@@ -37,7 +39,7 @@ $scope.copyAddress=function(){
     }, function(err) {
       // An error occurred. Show a message to the user
     });*/
- $cordovaSocialSharing.share('QR Code:  3BftToNURo4osQDQSrLa9M5WBDmvw2reur ', 'QR Code', null, 'http://www.zebpay.com');
+ $cordovaSocialSharing.share('QR Code:  '+$scope.userBitAddress, 'QR Code', null, 'http://www.zebpay.com');
   // access multiple numbers in a string like: '0612345678,0687654321'
   
 

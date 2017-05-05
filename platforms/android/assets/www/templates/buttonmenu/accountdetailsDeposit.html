@@ -2,23 +2,25 @@
   <ion-content>
     <div class="row" >
       <div class="col col-center text-center colline">
-        <h2 >0 Rs.</h2>
-        <h5 >Pending 0 Rs.</h5>
+        <h2 >{{currentuserbalance}} Rs.</h2>
+        <h5 >Pending {{currentuserpendingbalance}} Rs.</h5>
       </div>
     </div>
-   <div class="list">
+   <div class="list" style="padding-left: 5%;padding-right: 5%;">
     
-    <div class="col col-center text-center" style="padding-left: 10%;padding-right: 10%;">
+    <div class="col col-center text-center" >
       <div class="list list-inset" >
         <label class="item item-input">
-          <input  type="text" placeholder="Enter Amount">
+          <input  type="text" placeholder="Enter Amount" ng-model="deposite.amount">
         </label>
         </div>
     </div>
-    <div class="col col-center text-center">
+    <div class="col col-center text-center" >
       <h5 >(min: 5,000, max :50,00,000)</h5>
-      <h5 >Pay to bank account ICICI Bank</h5>
-      <button class="button button-positive button-small">
+      <h5 >Pay to bank account ICICI Bank
+            <i class="ion-edit"></i>
+      </h5>
+      <button class="button button-block button-positive" ng-click="openModalDepositeRequest()">
         Deposite
       </button>
     </div>

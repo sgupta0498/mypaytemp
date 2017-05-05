@@ -1,4 +1,4 @@
-myPay.controller('BuyVouchersCtrl', function($scope,$timeout) {
+myPay.controller('BuyVouchersCtrl', function($scope,$timeout,$ionicModal) {
   //alert("asdasfd")
 
 $scope.doRefresh = function() {
@@ -13,6 +13,36 @@ $scope.doRefresh = function() {
     
     }, 1000);
       
+  };
+$scope.vourcherDetailsData={};
+
+
+$ionicModal.fromTemplateUrl('templates/buttonmenu/buyVoucherModal.html', {
+        scope: $scope,
+        focusFirstInput: true
+    }).then(function(modal) {
+
+        $scope.modalCreateTicket = modal;
+       
+    });
+
+    $scope.openModalCreateTicket = function(vourcher) {
+        
+        $scope.vourcherDetailsData=vourcher;
+        console.log('Refreshing!'+angular.toJson($scope.vourcherDetailsData));
+        $scope.modalCreateTicket.show();
+    };
+
+    $scope.closeModalMyTicketslist = function() {
+        $scope.modalCreateTicket.hide();
+    };
+
+
+  $scope.openModalToBuyVoucher = function(voucherDetails) {
+    
+    console.log('voucherDetails::  ' +angular.toJson(voucherDetails));
+    
+    
   };
 
  $scope.vourcherData=[{

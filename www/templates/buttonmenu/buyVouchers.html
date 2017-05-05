@@ -1,7 +1,8 @@
 <ion-view view-title="Buy Vouchers">
  <ion-content >
 	    
-		
+		<ion-refresher on-refresh="doRefresh()">
+  	</ion-refresher>
 	<div class="col " >
         <div class="list list-inset col-center text-center" >
           <label class="item item-input">
@@ -18,9 +19,8 @@
 		    </a>
 		  </div>
 		</div> -->
-		 <ion-refresher on-refresh="doRefresh()">
-  </ion-refresher>
-	<div class="card" ng-repeat="vourcher in vourcherData | filter: key" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;">
+	
+	<div class="card" ng-repeat="vourcher in vourcherData | filter: key" style="padding: 0px;border-radius: 2%;border-radius: 30px;padding-bottom: 0px;" ng-click="openModalCreateTicket(vourcher)">
       <div class="item item-text-wrap" style="padding: 0px;margin-top: 0px;padding-top: 2px;padding-bottom: 0px;">
         <a class="item item-avatar" href="" style="min-height: 45px;padding-top: 2px;padding-bottom: 0px;top: 0px;">
         <img ng-src="{{vourcher.voucherImageUrl}}" alt="IMG" style="top: 0px;">
